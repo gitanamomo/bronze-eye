@@ -1,0 +1,58 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>青铜之眼 · V5 交互审计与角色精修</title><style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0b1f1e;color:#e9dfbf;font-family:"Songti SC",serif}main{max-width:1360px;margin:auto;padding:42px 25px 70px}h1,h2,h3{font-weight:400;letter-spacing:4px}h1{font-size:31px}h2{font-size:22px;margin-top:44px}p,li{color:#abc3b2;font-size:14px;line-height:1.95}a{color:#dfd1a0;text-underline-offset:5px}nav{display:flex;flex-wrap:wrap;gap:22px;margin:26px 0;font-size:14px}img{display:block;width:100%;border:1px solid #aec59b44;border-radius:3px}figure{margin:24px 0 36px}figcaption{color:#9fb8a8;font-size:13px;line-height:1.8;margin-top:12px}.small{font-size:12px;color:#86a996}.compare{position:relative;aspect-ratio:16/9;overflow:hidden}.compare img{position:absolute;inset:0}.compare .after{clip-path:inset(0 0 0 50%)}.line{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#eedfa8;pointer-events:none}.tag{position:absolute;bottom:15px;background:#0c2525db;border:1px solid #c2c49c55;padding:7px 13px;font:12px sans-serif;letter-spacing:2px}.old{left:15px}.new{right:15px}input{width:100%;accent-color:#bdcf99;margin:17px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:24px 0}.grid figure{margin:0}table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13px}th,td{border:1px solid #8ea69238;padding:10px 14px;text-align:left;color:#c8d8c7}th{background:#112d2c;color:#e7dbb0;letter-spacing:2px}@media(max-width:760px){h1{font-size:24px}.grid{grid-template-columns:1fr}}</style></head><body><main>
+<p class="small">THE EYE OF BRONZE / INTERACTION &amp; CHARACTER AUDIT 05</p>
+<h1>V5 深度审计与交互精修：让主宠互动、地面探索与机关回应自然衔接</h1>
+<p>在 V4 手绘人物与 V3 法斗伙伴的基础上，完成全流程代码审计与体验打磨：修复暂停未冻结伙伴、机关关闭丢失输入、远距离隔空摸宠与背对伸手、点击地面无回应及存档容错隐患；激活人物专注观察帧（<code>poses/2.webp</code>）、手电随动倾角、法斗寻迹提醒与三章绘景环境轻交互。</p>
+<nav>
+<a href="../../index.html">进入 V5 正式版游戏</a>
+<a href="../../docs/AUDIT_REPORT.md">完整审计报告 (Markdown)</a>
+<a href="../../versions/v4-before-audit/index.html">保留的 V4 基线版</a>
+<a href="audit-baseline.json">V4 基线问题复现记录</a>
+<a href="audit-test-results.json">V5 审计修复验证</a>
+<a href="hero-test-results.json">人物专项 (13项)</a>
+<a href="companion-test-results.json">伙伴专项 (15项)</a>
+<a href="full-game/test-results.json">完整通关 (28项)</a>
+</nav>
+
+<h2>一、核心审计发现与修复对照</h2>
+<table>
+<thead><tr><th>编号</th><th>审计问题</th><th>V4 基线表现</th><th>V5 完善结果</th></tr></thead>
+<tbody>
+<tr><td>A01</td><td>暂停未冻结世界与伙伴计时</td><td>打开暂停弹窗后，法斗仍继续走动/坐卧，人物与微尘计时未停</td><td>独立 <code>pause</code> 状态，完全冻结伙伴位移、人物帧计时与微尘</td></tr>
+<tr><td>A02</td><td>机关关闭后丢失已调输入</td><td>青铜门与终章机关关闭查手记后再打开，符号与双眼刻度全部清零</td><td><code>doorSlots</code>、<code>finalSlots</code>、<code>eyes</code> 持久化保留；第二章新增三盘全局刻度概览</td></tr>
+<tr><td>A03</td><td>远距离隔空摸宠且朝向穿帮</td><td>距离 &gt;105px 点击法斗也会原地空摸；法斗在右侧时林悦仍朝左侧伸手</td><td>远距点击先自动走近法斗，抵达身边后双方转向彼此、对视轻抚</td></tr>
+<tr><td>A04</td><td>点击可行走石板地面无回应</td><td>除菱形热点外点击地面毫无反应，探索受限于“点标记、看弹窗”</td><td>支持点击地面任意位置直达，生成青铜微光步印涟漪，并新增 6 处场景环境轻交互</td></tr>
+<tr><td>A05</td><td>损坏存档线索报错与主菜单覆盖</td><td>异常线索 ID 会令手记抛错；页面失焦可能在主菜单覆盖存档</td><td>新增 <code>sanitizeSave()</code> 清洗校验；仅在进入游戏后执行保存</td></tr>
+</tbody>
+</table>
+
+<h2>二、拖动对比：从“背对隔空伸手”到“走近双向对视抚摸”</h2>
+<div class="compare">
+<img src="../v4/screenshots/04-pet-expression.png" alt="V4 基线：法斗在右侧，林悦却朝左侧空伸手">
+<img class="after" src="screenshots/03-close-mutual-pet.png" alt="V5 精修：林悦走近并转向法斗，主宠双向对视互动">
+<span class="line"></span>
+<span class="tag old">V4 基线（隔空且朝向相反）</span>
+<span class="tag new">V5 精修（走近并双向对视）</span>
+</div>
+<label class="small" for="slider">拖动滑块对比主宠互动朝向与距离</label>
+<input id="slider" type="range" min="0" max="100" value="50">
+
+<h2>三、V5 新增交互细节实机画面</h2>
+<div class="grid">
+<figure><img src="screenshots/04-ground-click-walk.png" alt="点击地面产生青铜步印涟漪并自然走过去"><figcaption>A04 修复 · 点击地面产生青铜微光步印涟漪，林悦与法斗自然迈步前往</figcaption></figure>
+<figure><img src="screenshots/05-env-interaction.png" alt="场景环境轻交互：仰望天光裂隙"><figcaption>场景环境轻交互 · 点击天光裂隙、青铜灯台、枝梢金鸟或悬浮巨面，触发抬头凝望与环境脉动</figcaption></figure>
+<figure><img src="screenshots/02-puzzle-persisted.png" alt="重开机关自动保留已选青铜符号"><figcaption>A02 修复 · 关闭机关查阅手记后再次打开，已调符号与目轮数值完整保留</figcaption></figure>
+<figure><img src="screenshots/01-pause-frozen.png" alt="暂停状态完全冻结伙伴与人物动作"><figcaption>A01 修复 · 暂停期间世界、人物神态与法斗动作完全凝固</figcaption></figure>
+<figure><img src="screenshots/06-coop-guard.png" alt="法斗双人同心环驻守与金色青铜能量回路"><figcaption>C01 协作玩法 · 法斗驻守地面青铜同心环，连起金色能量回路协助林悦校准机关</figcaption></figure>
+<figure><img src="screenshots/07-scent-relic.png" alt="关灯暗场下法斗嗅探微光轨迹发掘隐藏秘宝"><figcaption>C02 协作玩法 · 关闭手电进入暗场后，法斗沿荧光气味轨迹嗅探出隐藏古蜀秘宝</figcaption></figure>
+<figure><img src="screenshots/08-tactile-puzzle-focus.png" alt="场景镜头推进聚焦与半透青铜圆环拨盘"><figcaption>S02 场景直觉机关 · 镜头平滑推进聚焦门环，半透古蜀青铜圆环拨盘与伙伴金色共鸣联动</figcaption></figure>
+<figure><img src="screenshots/09-optical-glyph.png" alt="手电光束指向照射显影门楣古蜀金文"><figcaption>S02 光学解谜 · 手电光束跟随鼠标照射门楣暗刻，显影出「☀ ▸ 羽 ▸ 枝」古蜀金文</figcaption></figure>
+<figure><img src="screenshots/10-rubbing-journal.png" alt="双页手绘考古拓片与法斗爪印签章手记本"><figcaption>S04 拓片手记本 · 左页动态点亮三章青铜拓片星图与法斗爪印签章，右页收录线索与伙伴发现</figcaption></figure>
+</div>
+
+<h2>四、三章完整实机通关画面（V5 回归）</h2>
+<div class="grid">
+<figure><img src="full-game/screenshots/04-tree.png" alt="第二章神树祭坛与三盘刻度显示"><figcaption>第二章 · 神树祭坛（热点与弹窗实时显示三盘刻度）</figcaption></figure>
+<figure><img src="full-game/screenshots/05-chamber.png" alt="第三章青铜之眼密室"><figcaption>第三章 · 青铜之眼密室（逆序符号与光影双目唤醒）</figcaption></figure>
+</div>
+<p class="small">全部验证通过：审计问题 5/5 修复，人物专项 13/13 通过，伙伴专项 15/15 通过，完整通关 28/28 通过，0 JS 错误，0 资源失败。</p>
+</main><script>document.querySelector('#slider').addEventListener('input',e=>{document.querySelector('.after').style.clipPath=`inset(0 0 0 ${e.target.value}%)`;document.querySelector('.line').style.left=e.target.value+'%'});</script></body></html>

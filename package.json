@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  },
+  "name": "bronze-eye",
+  "version": "1.4.0",
+  "private": true,
+  "description": "古蜀迷踪：青铜之眼，本地考古解谜短篇",
+  "scripts": {
+    "start": "python3 -m http.server 5173 --bind 127.0.0.1",
+    "build:mac": "node tools/build-macos-app.cjs",
+    "test": "node tools/full-test.cjs",
+    "test:companion": "node tools/test-companion.cjs",
+    "test:hero": "node tools/test-hero.cjs",
+    "test:audit": "node tools/audit-baseline.cjs"
+  }
+}

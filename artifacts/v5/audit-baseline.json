@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-07",
+  "target": "versions/v4-before-audit",
+  "findings": [
+    {
+      "id": "A01",
+      "issue": "暂停不冻结伙伴",
+      "reproduced": true,
+      "before": {
+        "x": 616.3340717796225,
+        "y": 778,
+        "vx": 216.78967826763193,
+        "vy": 0,
+        "behavior": "follow",
+        "sheet": "walk",
+        "frame": 11,
+        "scene": 0,
+        "trailLength": 17
+      },
+      "after": {
+        "x": 680.1074233951466,
+        "y": 778,
+        "vx": 0,
+        "vy": 0,
+        "behavior": "settle",
+        "sheet": "idle",
+        "frame": 0,
+        "scene": 0,
+        "trailLength": 17
+      }
+    },
+    {
+      "id": "A02",
+      "issue": "机关重开丢失输入",
+      "reproduced": true,
+      "entered": "☀\n太阳",
+      "reopened": "?\n第 1 位"
+    },
+    {
+      "id": "A03",
+      "issue": "远距离即可触发抚摸",
+      "reproduced": true,
+      "distance": 109.59099696702619,
+      "action": "pet"
+    },
+    {
+      "id": "A04",
+      "issue": "点击可行走地面没有回应",
+      "reproduced": true,
+      "oldX": 908.119999999999,
+      "newX": 908.119999999999
+    },
+    {
+      "id": "A05",
+      "issue": "损坏存档线索可令手记报错",
+      "reproduced": true,
+      "errors": [
+        "Cannot read properties of undefined (reading 'title')"
+      ]
+    }
+  ],
+  "note": "在保留的 V4 基线版本上复现全部 5 项体验与稳健性问题；独立临时浏览器上下文运行。"
+}

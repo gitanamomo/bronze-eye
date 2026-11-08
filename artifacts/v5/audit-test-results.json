@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-07",
+  "browser": "151.0.7922.34",
+  "target": "index.html (V5)",
+  "findings": [
+    {
+      "id": "A01",
+      "issue": "暂停不冻结伙伴",
+      "reproduced": false,
+      "before": {
+        "x": 632.2902009526299,
+        "y": 778,
+        "vx": 230.24240350503004,
+        "vy": 0,
+        "behavior": "follow",
+        "sheet": "walk",
+        "frame": 1,
+        "scene": 0,
+        "trailLength": 17,
+        "guarding": false,
+        "scentTracking": false,
+        "scentReached": false
+      },
+      "after": {
+        "x": 632.2902009526299,
+        "y": 778,
+        "vx": 230.24240350503004,
+        "vy": 0,
+        "behavior": "follow",
+        "sheet": "walk",
+        "frame": 1,
+        "scene": 0,
+        "trailLength": 17,
+        "guarding": false,
+        "scentTracking": false,
+        "scentReached": false
+      }
+    },
+    {
+      "id": "A02",
+      "issue": "机关重开丢失输入",
+      "reproduced": false,
+      "entered": "☀\n太阳",
+      "reopened": "☀\n太阳"
+    },
+    {
+      "id": "A03",
+      "issue": "远距离即可触发抚摸",
+      "reproduced": false,
+      "distance": 98.05114049021896,
+      "action": "pet"
+    },
+    {
+      "id": "A04",
+      "issue": "点击可行走地面没有回应",
+      "reproduced": false,
+      "oldX": 907.9759999999993,
+      "newX": 1069.5103856237629
+    },
+    {
+      "id": "C01",
+      "issue": "法斗双人同心环驻守与共鸣校准",
+      "reproduced": false,
+      "guarding": true,
+      "coopSlot1": "羽\n飞鸟"
+    },
+    {
+      "id": "S02",
+      "issue": "场景镜头聚焦拨盘与手电光学显影暗刻",
+      "reproduced": false,
+      "puzzleFocus": true,
+      "opticalRevealed": 0
+    },
+    {
+      "id": "S03",
+      "issue": "2.5D 多层视差前景遮挡与水面实时波纹倒影",
+      "reproduced": false,
+      "px": "0.000",
+      "hasFgSilhouette": true,
+      "reflectionFrames": 697
+    },
+    {
+      "id": "C02",
+      "issue": "暗场微光嗅探与隐藏秘宝发掘",
+      "reproduced": false,
+      "relicFound": "amberBell"
+    },
+    {
+      "id": "S04",
+      "issue": "古蜀编钟泛音混响音景与双页手绘拓片手记",
+      "reproduced": false,
+      "journalBook": true,
+      "audioStats": {
+        "count": 33,
+        "lastType": "look",
+        "hasReverb": true,
+        "partials": 3
+      }
+    },
+    {
+      "id": "A05",
+      "issue": "损坏存档线索可令手记报错",
+      "reproduced": false,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "allFixed": true
+}

@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+**/.DS_Store
+*.DS_Store
+*.mp4
+*.webm
+versions/
+*.app/
+artifacts/v2/
+artifacts/v3/
+artifacts/*/full-game/
+artifacts/test-failure.json
+artifacts/screenshots/test-failure.png
+

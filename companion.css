@@ -1,0 +1,12 @@
+/* Actual user-supplied animation frames, with ground-aligned paws. */
+#companion{position:absolute;width:168px;height:140px;padding:0;border:0;background:none!important;box-shadow:none!important;transform-origin:50% 94.375%;cursor:pointer;isolation:isolate;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#companion:hover{border:0;background:none;filter:none}#companion:focus-visible{outline:1px solid #e6d6a3;outline-offset:-13px;border-radius:38%}
+.pet-shadow{position:absolute;left:50%;top:126px;height:12px;width:84px;transform:translateX(-50%);border-radius:50%;background:#152b23;filter:blur(4px);pointer-events:none;z-index:-1;transition:width .3s,opacity .3s}
+.pet-motion{position:absolute;inset:0;transform-origin:50% 94.375%;pointer-events:none;filter:brightness(.98) saturate(.85) drop-shadow(0 2px 1px #112a2233)}
+.pet-sprite,.pet-ghost{position:absolute;inset:0;background-image:url('assets/companion/idle.webp');background-repeat:no-repeat;background-size:400% 300%;background-position:0 0;transform-origin:50% 50%;image-rendering:auto;pointer-events:none}
+.pet-ghost{opacity:0}.pet-reaction{position:absolute;left:70px;top:-5px;color:#f2c8b0;font:22px/1 "Songti SC",serif;text-shadow:0 1px 4px #1a3229,0 0 12px #ffdfb566;opacity:0;pointer-events:none}
+#companion[data-behavior="sleep"] .pet-reaction{color:#cee4cc}#stage:has(#menu:not([hidden])) #companion{visibility:hidden}
+#hotspots{z-index:9}#companionBtn svg{width:16px;height:16px;vertical-align:-2px;fill:currentColor}
+@media(prefers-reduced-motion:reduce){.pet-motion{transform:none!important}.pet-reaction{transform:none!important}}
+/* Keep the entire walking strip clear, including the companion's low resting pose. */
+#interaction{top:242px;bottom:auto;left:60px;transform:none;max-width:320px;text-align:left}
