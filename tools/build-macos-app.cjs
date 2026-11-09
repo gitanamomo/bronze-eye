@@ -128,6 +128,7 @@ async function buildAppIcon(icnsDest) {
     'index.html',
     'style.css',
     'painterly.css',
+    'expedition.css',
     'companion.css',
     'hero.css',
     'game.js',
@@ -144,6 +145,9 @@ async function buildAppIcon(icnsDest) {
     'assets/painterly/tree.webp',
     'assets/painterly/vault-clean.webp',
     'assets/painterly/mask.webp',
+    'assets/painterly/chime.webp',
+    'assets/painterly/dawn.webp',
+    'assets/hero/celebration-hug.webp',
     'assets/painterly/tree-inscription.svg',
     'assets/companion/idle.webp',
     'assets/companion/walk.webp',
@@ -180,9 +184,9 @@ async function buildAppIcon(icnsDest) {
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>
-  <string>1.4.0</string>
+  <string>1.7.0</string>
   <key>CFBundleVersion</key>
-  <string>5</string>
+  <string>8</string>
   <key>LSMinimumSystemVersion</key>
   <string>12.0</string>
   <key>NSHighResolutionCapable</key>

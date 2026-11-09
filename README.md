@@ -2,8 +2,8 @@
 
 <div align="center">
 
-![版本](https://img.shields.io/badge/Version-v1.6.0%20(V7)-0f4c3a.svg?style=flat-square)
-![测试通过](https://img.shields.io/badge/Tests-30%2F30%20Passed-2b8a3e.svg?style=flat-square)
+![版本](https://img.shields.io/badge/Version-v1.7.0%20(V8)-0f4c3a.svg?style=flat-square)
+![验证记录](https://img.shields.io/badge/Validation-artifacts%2Fv8-2b8a3e.svg?style=flat-square)
 ![运行环境](https://img.shields.io/badge/Platform-macOS%20Native%20App%20%7C%20Web%20Browser-c89b3c.svg?style=flat-square)
 ![技术栈](https://img.shields.io/badge/Tech-Vanilla%20JS%20%2B%20Web%20Audio%20%2B%20Canvas-1d4e89.svg?style=flat-square)
 ![构建依赖](https://img.shields.io/badge/Dependencies-Zero%20Build%20%2F%20No%20Bundler-6a4c93.svg?style=flat-square)
@@ -15,6 +15,22 @@
 </div>
 
 ---
+
+## V8 更新 · 2026-11-09
+
+- **双重音律**：第四章保留调音，新增从浑天仪推断的四次叩钟顺序；可重听、清空，错误不清除调音进度。未驻守时不再用亮灯直接标出正确音高。
+- **终章九灯**：触碰会翻转本灯及上下左右邻灯，需要规划联动关系。支持当前界面撤回与基于当前盘面的逐步提示；灯态、触碰次数与叩钟记录自动保存，旧存档可读取。已通关旧存档保留结局。
+- **温柔陪伴**：右上角「♡ 陪伴」可伸手抚摸、陪它追光、一起休息。远处抚摸时伙伴停下等候；接触后脚底停稳，主角移动可中断亲昵，呼唤可中断追光；连续抚摸有不同轻语。
+- **绘景质感**：增加分场景冷暖光束、地面微光、暗角与铜锈纹理，沿用原有绘景与角色资产。未重制人物动作帧，不宣称已达到骨骼动画表现。
+- **同心收束**：星阵全亮且现场两份记录收齐后，让伙伴实际坐稳铜环再合上日轮，才出现相拥庆祝。
+
+旧版源码快照在本地 `versions/v7-before-expedition/`（被 Git 忽略，需配合根目录资源使用）；GitHub 中原版由已有提交保留。
+
+### 修改指南
+
+谜题逻辑在 `game.js`：`chimePuzzle` 为调音与四叩，`flipLamps` / `lampRoute` / `dawnPuzzle` 为星灯规则、提示求解与界面。更改星灯初始盘面时，需同时调整 `defaultState` 与 `sanitizeSave` 的回退值，并确认它可解。
+
+宠物逻辑在 `companion.js`：`prepareGreet` 停驻迎候、`pat` 接触与路线重置、`update` 负责优先级和脚底运动。`expedition.css` 管理 V8 新界面与绘景叠层，`drawExpeditionLight` 管理现有画布上的光束。原生打包资源清单在 `tools/build-macos-app.cjs`。
 
 ## 游戏实机截图精选
 
@@ -63,8 +79,8 @@
 | **Prologue / 01** | **青铜神殿前厅** | 调查石碑、残器与壁画，叩响青铜古门 | 青铜门环棘轮符号排列（太阳 → 飞鸟 → 树枝） |
 | **Chapter 02** | **神树祭坛** | 读取计数铭版，调谐神树三处机关节律 | 太阳轮（3）、飞鸟轮（2）、神木轮（4），神树铜枝渐进点亮 |
 | **Chapter 03** | **青铜之眼密室** | 结合考古手记，唤醒沉睡千年的青铜之眼 | 逆向旋回符号（树枝 → 飞鸟 → 太阳）与双目承载（左目3·右目4） |
-| **Chapter 04** | **星璇编钟长廊** | 聆听潮音古铭，调谐三枚青铜大钟，导通星桥 | 古蜀五音律拟物编钟调谐（日钟宫3 · 鸟钟羽5 · 枝钟商2） |
-| **Chapter 05** | **破晓观星台** | 踏上日轮圣坛，与伙伴相拥见证古蜀破晓 | 主宠相拥庆祝互动、通关大卡展示、自由漫步破晓天台 |
+| **Chapter 04** | **星璇编钟长廊** | 同时解读音高与叩击先后 | 三钟调谐 + 归巢四叩，静音时可读叩击记录 |
+| **Chapter 05** | **破晓观星台** | 调查星阵规则，与伙伴共同开启日轮 | 九灯十字联动、撤回、动态提示、同心环驻守、相拥结局 |
 
 ---
 
@@ -144,6 +160,7 @@ python3 -m http.server 5173 --bind 127.0.0.1
 bronze-eye/
 ├── index.html                    # 游戏主入口与 DOM 结构
 ├── style.css                     # 核心舞台、布局与基础控件样式
+├── expedition.css               # V8 星灯、陪伴面板、铜锈纹理与分场景光层
 ├── painterly.css                 # 2.5D 绘景、青铜棘轮、暗场遮罩与相拥终章特效
 ├── game.js                       # 场景管线、五章解谜逻辑、Web Audio 合成音与存档
 ├── hero.js / hero.css            # 林悦 16 帧手绘序列帧、表情、接地阴影与环境色
@@ -169,19 +186,16 @@ bronze-eye/
 
 ## 自动化测试与质量验收
 
-项目配备完整的 Playwright 真实浏览器端到端自动化测试套件（[tools/verify-v7-chapters.cjs](tools/verify-v7-chapters.cjs)），完全通过真实鼠标点击、键盘移动、线索收集、机关拨动进行全流程推演，**绝不通过控制台强行注入通关状态**：
+当前 V8 的完整流程测试：
 
 ```bash
-# 运行 V7 全五章端到端全量验证
-node tools/verify-v7-chapters.cjs
+npm run test:expedition
+node tools/test-v8-interactions.cjs
+# 伙伴旧版回归需先启动本地 5173 服务
+COMPANION_ARTIFACT_DIR=artifacts/v8 npm run test:companion
 ```
 
-**测试验收结果**：
-- ✅ **全五章无缝通关**：前厅 → 神树祭坛 → 密室 → 星璇编钟长廊 → 破晓观星台
-- ✅ **全 30 项断言检查 100% 通过**
-- ✅ **无任何 JavaScript 运行时未捕获错误（0 Errors）**
-- ✅ **无任何网络 404 或静态资源损坏加载失败（0 Failures）**
-- ✅ **存档隔离与向后兼容**：数据存入 `bronze-eye-save-v1`，启动经 `sanitizeSave()` 清洗，无云端追踪、绝不向外发送任何个人数据
+测试使用本机已有 Chromium，`BROWSER_PATH` 可指定浏览器可执行文件。结果保存在 `artifacts/v8/`；旧版测试和截图保留，`verify-v7-chapters.cjs` 仅记录历史玩法，已不适用于新增的星阵与叩钟流程。原生 Safari、iOS、真实手柄与长时间帧率仍需实机验收。
 
 ---
 

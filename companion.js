@@ -60,6 +60,8 @@
       this.sniffCooldown = 5;
       this.greetCooldown = 0;
       this.nuzzleFor = 0;
+      this.greetFor = 0;
+      this.affection = 0;
       this.ghostFor = 0;
       this.wakeFor = 0;
       this.guardTarget = null;
@@ -80,6 +82,8 @@
     guardPad(pad) {
       if (!pad) return;
       if (this.idleFor > 7) this.wakeFor = .56;
+      this.greetFor = this.nuzzleFor = 0;
+      this.vignette = null;
       this.guardTarget = { x: clamp(pad.x, 250, 1350), y: clamp(pad.y, 705, 814) };
       this.guardSettled = false;
       this.scentTarget = null;
@@ -130,6 +134,9 @@
     }
 
     call(hintX = null) {
+      this.nuzzleFor = 0;
+      this.vignette = null;
+      this.greetFor = 0;
       this.releaseGuard(true);
       this.clearScent();
       if (this.idleFor > 7) this.wakeFor = .56;
@@ -146,8 +153,11 @@
     prepareGreet(leader) {
       if (this.hidden) return;
       this.releaseGuard(true);
+      this.clearScent();
+      this.vignette = null;
+      this.greetFor = 6;
       if (this.idleFor > 7) this.wakeFor = .56;
-      this.recallFor = 3.2;
+      this.recallFor = 0;
       this.attentionFor = 2.6;
       this.reactionFor = 1.4;
       this.reaction.textContent = '♪';
@@ -161,10 +171,18 @@
       if (this.hidden || this.greetCooldown > 0) return false;
       this.releaseGuard(true);
       if (this.idleFor > 7) this.wakeFor = .56;
-      this.greetCooldown = 1.2;
+      this.clearScent();
+      this.vignette = null;
+      this.greetFor = 0;
+      this.recallFor = 0;
+      this.vx = this.vy = 0;
+      // Anchor the trail after contact so the old route cannot pull paws away.
+      this.trail = [{x:this.x,y:this.y-23},{x:leader?.x??this.x,y:leader?.y??this.y}];
+      this.affection++;
+      this.greetCooldown = 1.8;
       this.attentionFor = 3.2;
       this.reactionFor = 2.1;
-      this.nuzzleFor = .85;
+      this.nuzzleFor = 1.6;
       this.reaction.textContent = '♡';
       const px = leader?.x ?? this.lastPlayer?.x ?? this.x;
       if (Math.abs(px - this.x) > 6) this.facing = px < this.x ? -1 : 1;
@@ -252,7 +270,7 @@
       this.el.hidden = this.hidden;
       if (this.hidden || leader.mode === 'pause' || document.hidden || dt <= 0) return;
       this.age += dt;
-      for (const key of ['reactionFor', 'attentionFor', 'recallFor', 'greetCooldown', 'sniffCooldown', 'nuzzleFor', 'ghostFor', 'wakeFor']) this[key] = Math.max(0, this[key] - dt);
+      for (const key of ['reactionFor', 'attentionFor', 'recallFor', 'greetCooldown', 'sniffCooldown', 'nuzzleFor', 'ghostFor', 'wakeFor', 'greetFor']) this[key] = Math.max(0, this[key] - dt);
       const playerTravel = Math.hypot(leader.x - this.lastPlayer.x, leader.y - this.lastPlayer.y);
       const leaderMoving = playerTravel > .1;
       if ((leaderMoving || this.recallFor > 0 || this.attentionFor > 0) && this.idleFor > 7 && this.wakeFor <= 0) { this.wakeFor = .56; this.idleFor = 0; }
@@ -273,7 +291,13 @@
         }
       }
       let goal = { ...this.trailGoal };
-      if (this.guardTarget) {
+      if (this.greetFor > 0 || (this.nuzzleFor > 0 && !leaderMoving)) {
+        goal = {x:this.x,y:this.y};
+        this.sniffFor = 0;
+      } else if (this.recallFor > 0) {
+        const side=this.x < leader.x ? -1 : 1;
+        goal={x:leader.x+side*60,y:leader.y+20};
+      } else if (this.guardTarget) {
         goal = { ...this.guardTarget };
         this.sniffFor = 0;
       } else if (this.scentTarget) {
@@ -308,7 +332,9 @@
       let maxSpeed = this.sniffFor > 0 ? 32 : run ? 330 : 235;
       // Eased acceleration and braking; stand still in a small dead zone instead of jittering.
       let wanted = distance > 7 ? Math.min(maxSpeed, Math.sqrt(2 * 470 * (distance - 7))) : 0;
-      if (leader.mode === 'ending' || this.wakeFor > 0) wanted = 0;
+      if (leader.mode === 'ending' || this.wakeFor > 0 || this.greetFor > 0 || (this.nuzzleFor > 0 && !leaderMoving)) wanted = 0;
+      if (this.greetFor > 0 || (this.nuzzleFor > 0 && !leaderMoving)) this.vx = this.vy = 0;
+      if (leaderMoving) this.nuzzleFor = 0;
       const tx = distance > .01 ? gx / distance * wanted : 0;
       const ty = distance > .01 ? gy / distance * wanted : 0;
       this.vx = damp(this.vx, tx, 7, dt);
@@ -345,6 +371,13 @@
         if (Math.abs(this.vx) > 13) this.facing = this.vx < 0 ? -1 : 1;
         this.drawFrame('walk', Math.floor(this.walkPhase) % 12, this.facing);
         behavior = this.guardTarget ? 'guard-move' : this.scentTarget ? 'scent-track' : this.vignette ? `vignette-${this.vignette.kind}` : this.sniffFor > 0 ? 'sniff' : run ? 'catch-up' : 'follow';
+      } else if (this.nuzzleFor > 0) {
+        this.drawFrame('idle', this.nuzzleFor > 1.1 ? 1 : 2, this.facing);
+        behavior = 'nuzzle';
+      } else if (this.greetFor > 0) {
+        if(Math.abs(leader.x-this.x)>6)this.facing=leader.x<this.x?-1:1;
+        this.drawFrame('idle',2,this.facing);
+        behavior = 'greet';
       } else if (this.guardSettled) {
         this.idleFor += dt;
         if (Math.abs(leader.x - this.x) > 8) this.facing = leader.x < this.x ? -1 : 1;
@@ -400,7 +433,7 @@
     }
 
     snapshot() {
-      return { x: this.x, y: this.y, vx: this.vx, vy: this.vy, behavior: this.el.dataset.behavior, sheet: this.sheet, frame: this.frame, scene: this.scene, trailLength: this.trail.length, guarding: Boolean(this.guardSettled), scentTracking: Boolean(this.scentTarget), scentReached: Boolean(this.scentReached), vignette: this.vignette ? this.vignette.kind : null };
+      return { x: this.x, y: this.y, vx: this.vx, vy: this.vy, behavior: this.el.dataset.behavior, sheet: this.sheet, frame: this.frame, scene: this.scene, trailLength: this.trail.length, guarding: Boolean(this.guardSettled), scentTracking: Boolean(this.scentTarget), scentReached: Boolean(this.scentReached), affection:this.affection, vignette: this.vignette ? this.vignette.kind : null };
     }
   }
   window.BronzeCompanion = BronzeCompanion;

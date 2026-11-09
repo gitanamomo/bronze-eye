@@ -11,9 +11,9 @@ const clues={
  return:{title:'逆读铭文 · 来路与归途',tag:'青铜之眼 / 环形铭文',text:'祭坛边缘的文字向内旋回。三个符号恰好与入口石碑相反。',quote:'「归时溯源：枝、鸟、日。左纳光，右藏影。」',note:'林悦：把树与日放回各自的眼睛，这里就会醒来。',record:'最终符号：树枝、飞鸟、太阳；左纳光（太阳3），右藏影（树枝4）。'},
  eyes:{title:'双眼 · 记忆的容器',tag:'青铜之眼 / 面具观察',text:'面具双眼里映出的不是林悦，而是两种不同的景象：左边是太阳，右边是树的剪影。',quote:'「光与影交汇之时，往昔便有了形状。」',note:'林悦：把前厅的太阳刻记与祭坛的树枝数量对应过来。',record:'左眼映太阳，右眼映树枝。需要前两章的数字线索。'},
  chimeStele:{title:'潮音古碑 · 宫角羽',tag:'星璇长廊 / 声学刻石',text:'石碑刻着潮涌之纹与三枚大钟悬挂的形制，水汽在其上凝聚成露。',quote:'「击日钟为宫，击鸟钟为羽，击枝钟为商；三音共振，星桥乃通。」',note:'林悦：日钟对应宫（3），鸟钟对应羽（5），枝钟对应商（2）。',record:'潮音古碑：星璇编钟分别调整为 日钟 3 / 鸟钟 5 / 枝钟 2。'},
- astrolabe:{title:'浑天铜仪 · 星野之纪',tag:'星璇长廊 / 浑天星仪',text:'浑天环上的星点逆时针旋转，中轴正对深壑对面破晓的方位。',quote:'「循声渡虚，见日初升；相携相伴，归途不孤。」',note:'林悦：星桥通向的是破晓的云海。千年前的守望者跨过这里，走向晨光。',record:'浑天铜仪：编钟调谐后虚空成桥，通向最后的破晓观星台。'},
- dawnMemorial:{title:'守望者之碑 · 破晓之盟',tag:'观星圣台 / 终章铭文',text:'石碑沐浴在金色的朝阳下，上面刻着古蜀守望者对大地的誓约与同行灵犬的剪影。',quote:'「天地长存，灵犬相伴；日月星汉，尽归此心。」',note:'林悦抱起法斗：我们终于走到了阳光下。这段千年的记忆，由我们一起带回世间。',record:'守望者之碑：古蜀文明将对天地的敬畏与对伙伴的深情留在破晓圣台。'},
- houndRelief:{title:'忠犬浮雕 · 千年不离',tag:'观星圣台 / 忠犬浮雕',text:'巍峨古蜀守护者身旁，蹲坐着一只仰望主人的小犬，姿态与身边的小法斗如出一辙。',quote:'「千载虽逝，其温犹存。」',note:'林悦摸了摸法斗的脑袋，小家伙开心地摇着小尾巴。',record:'忠犬浮雕：记录了从远古到今日，人与伙伴从未改变的信任与相守。'}
+ astrolabe:{title:'浑天铜仪 · 星野之纪',tag:'星璇长廊 / 浑天星仪',text:'浑天环上的星点逆时针旋转，中轴正对深壑对面破晓的方位。',quote:'「循声渡虚，见日初升；相携相伴，归途不孤。」',note:'林悦：星环上还有四枚击痕：鸟先报晓，日随其后；枝承晨露，鸟复归巢。这是叩钟的先后，不是调音的刻度。',record:'浑天铜仪：四击之序：鸟先报晓，日随其后；枝承晨露，鸟复归巢。三钟调音后还需依序叩响。'},
+ dawnMemorial:{title:'守望者之碑 · 破晓之盟',tag:'观星圣台 / 终章铭文',text:'石碑沐浴在金色的朝阳下，上面刻着古蜀守望者对大地的誓约与同行灵犬的剪影。',quote:'「天地长存，灵犬相伴；日月星汉，尽归此心。」',note:'林悦：日轮还有最后一道锁。九盏星灯需同时亮起；按下一盏，它与上下左右相邻的灯都会明暗翻转。斜角不受影响。',record:'九灯同明：每次触碰翻转本灯及上下左右邻灯，斜角不变。同一灯触碰两次等于未动。'},
+ houndRelief:{title:'忠犬浮雕 · 千年不离',tag:'观星圣台 / 忠犬浮雕',text:'巍峨古蜀守护者身旁，蹲坐着一只仰望主人的小犬，姿态与身边的小法斗如出一辙。',quote:'「千载虽逝，其温犹存。」',note:'林悦：浮雕中的小犬踏在同心环上。星灯全明后，需要伙伴真正坐稳铜环，才可传回最后一道共鸣。',record:'忠犬浮雕：记录了从远古到今日，人与伙伴从未改变的信任与相守。'}
 };
 const relics={
  amberBell:{scene:0,x:985,y:742,title:'铜铃犬牌 · 守望之伴',tag:'前厅暗处 / 伙伴嗅探发现',text:'在关闭手电后的幽暗石缝间，法斗用鼻尖拱出了一枚沾着微光铜锈的小巧犬牌。犬牌内侧刻着太阳纹与一只蹲坐的小兽。',quote:'「凡循光入殿者，必有灵犬同行；初门之首，始于烈日。」',note:'林悦摸了摸小家伙的脑袋：原来千年前的守望者，也带着自己的毛孩子。犬牌上的太阳纹已与青铜门首位产生共鸣。',record:'伙伴在暗处嗅出「铜铃犬牌」：古蜀守望者亦有灵犬相伴，印证青铜门首位为「太阳」。'},
@@ -27,9 +27,9 @@ const scenes=[
  {name:'神树祭坛',goal:'读取铭版，调整三处机关的节律',desc:'风没有经过这里，树却在轻轻作响。',points:[['relief',1380,495,'计数铭版'],['roots',655,657,'神树根部'],['echo',263,515,'铜壁余响'],['sunDial',435,571,'太阳机关'],['birdDial',800,569,'飞鸟机关'],['branchDial',1145,571,'树枝机关'],['passage',1002,695,'地下通道'],['back',180,722,'返回前厅']],env:[['canopy',795,255,'枝梢金鸟','wonder','bell','tree','林悦：铜枝上的金鸟迎着天光，梢头细铃在无风自鸣。'],['stream',160,625,'地下活水','curious','water','stream','林悦：活水顺着铜槽环绕祭坛，将水声化作平稳的节拍。']],pad:{x:800,y:774,label:'神树副铜环',path:'M435 571 Q618 710 800 774 M800 774 L800 569 M800 774 Q972 710 1145 571'},relic:'jadeLeaf',optical:{x:945,y:410,sym:'叁 · 贰 · 肆',label:'铜干暗刻 · 叁·贰·肆',text:'手电斜照神树铜干，折射出磷光节律：「太阳叁 · 飞鸟贰 · 树枝肆」。'}},
  {name:'青铜之眼密室',goal:'结合手记，让青铜之眼苏醒以开启长廊',desc:'它注视的，并不是闯入者。',points:[['return',404,519,'逆读铭文'],['eyes',1190,530,'双眼刻痕'],['final',800,686,'记忆中枢'],['back',180,722,'返回祭坛']],env:[['maskGaze',800,285,'青铜巨面','wonder','bell','mask','林悦：悬浮的青铜巨面内部似乎有微光随呼吸起伏。'],['lotusPool',1310,685,'镜池莲影','curious','water','stream','林悦：静水映出面具与天光，像一面封存时间的铜镜。']],pad:{x:635,y:764,label:'溯源副铜环',path:'M635 764 Q718 730 800 686'},relic:'bronzeEcho',optical:{x:800,y:438,sym:'枝▸羽▸☀ ｜ 3·4',label:'面具暗铭 · 逆旋3·4',text:'光束穿透面具下方水雾，显影出终章秘铭：「逆旋归源（枝·羽·日），左纳三曜、右藏四影」。'}},
  {name:'星璇编钟长廊',goal:'聆听潮音古铭，调谐三枚青铜大钟，导通星桥',desc:'音律所至，虚空成桥。',points:[['chimeStele',242,540,'潮音石碑'],['astrolabe',1260,535,'星璇浑天仪'],['chimeBells',800,442,'青铜编钟架'],['bridgeDais',800,695,'星桥基台'],['back',180,722,'返回密室']],env:[['chimeEcho',800,320,'编钟余韵','wonder','bell','chime','林悦：编钟铜梁微微震颤，空气中回荡着古老的泛音。'],['starChasm',800,610,'星光深壑','curious','look','star','林悦：深壑下浮动着漫天青金色星尘，像倒悬的银河。']],pad:{x:642,y:764,label:'宫律副铜环',path:'M642 764 Q720 720 800 695'},relic:'cloudWhistle',optical:{x:800,y:442,sym:'宫3 · 羽5 · 枝2',label:'编钟暗刻 · 宫3羽5枝2',text:'手电照亮中钟铭文，显影出五音古律：「日钟宫三 · 鸟钟羽五 · 枝钟商二，星桥乃通」。'}},
- {name:'破晓观星台',goal:'踏上日轮圣坛，与伙伴相拥见证破晓破雾',desc:'第一缕曙光，照亮了千年的归途。',points:[['dawnMemorial',235,550,'守望者之碑'],['houndRelief',1240,545,'忠犬守望浮雕'],['dawnAltar',800,720,'日轮结算圣坛'],['back',180,722,'返回长廊']],env:[['cloudSea',800,360,'晨光云海','wonder','look','dawn','林悦：金色的朝阳漫过翻滚的云海，群峰如出水芙蓉！'],['dawnSunGate',800,240,'破晓金门','wonder','bell','gate','林悦：千年的石门向天际敞开，飞鸟迎着红日翱翔。']],pad:{x:635,y:765,label:'同心归宿环',path:'M635 765 Q718 738 800 720'},relic:'dawnSunPendant',optical:{x:800,y:360,sym:'四鸟绕日 · 万物向阳',label:'天门神铭 · 万物向阳',text:'朝阳穿透门拱，在石台上投下古蜀最神圣的金光符印：「四鸟绕日 · 万物向阳 · 守望长青」。'}}
+ {name:'破晓观星台',goal:'调查碑文与浮雕，解开九灯星阵，与伙伴共同开启破晓',desc:'第一缕曙光，照亮了千年的归途。',points:[['dawnMemorial',235,550,'守望者之碑'],['houndRelief',1240,545,'忠犬守望浮雕'],['dawnAltar',800,720,'日轮结算圣坛'],['back',180,722,'返回长廊']],env:[['cloudSea',800,360,'晨光云海','wonder','look','dawn','林悦：金色的朝阳漫过翻滚的云海，群峰如出水芙蓉！'],['dawnSunGate',800,240,'破晓金门','wonder','bell','gate','林悦：千年的石门向天际敞开，飞鸟迎着红日翱翔。']],pad:{x:635,y:765,label:'同心归宿环',path:'M635 765 Q718 738 800 720'},relic:'dawnSunPendant',optical:{x:800,y:360,sym:'四鸟绕日 · 万物向阳',label:'天门神铭 · 万物向阳',text:'朝阳穿透门拱，在石台上投下古蜀最神圣的金光符印：「四鸟绕日 · 万物向阳 · 守望长青」。'}}
 ];
-function defaultState(muted=false){return{scene:0,x:675,y:755,clues:[],relics:[],optical:[],solved:[false,false,false,false,false],dials:[1,1,1],chimes:[1,1,1],doorSlots:[null,null,null],finalSlots:[null,null,null],eyes:[1,1],flash:true,muted:Boolean(muted),started:Date.now(),elapsed:0,ended:false}}
+function defaultState(muted=false){return{scene:0,x:675,y:755,clues:[],relics:[],optical:[],solved:[false,false,false,false,false],dials:[1,1,1],chimes:[1,1,1],doorSlots:[null,null,null],finalSlots:[null,null,null],eyes:[1,1],dawnLights:[0,0,0,1,1,1,0,1,0],dawnMoves:0,melody:[],flash:true,muted:Boolean(muted),started:Date.now(),elapsed:0,ended:false}}
 function sanitizeSave(raw){
  if(!raw||raw.version!==1||!Number.isInteger(raw.scene)||raw.scene<0||raw.scene>=scenes.length||!Array.isArray(raw.clues)||!Array.isArray(raw.solved)||!Array.isArray(raw.dials))return null;
  return{
@@ -45,6 +45,9 @@ function sanitizeSave(raw){
   doorSlots:Array.isArray(raw.doorSlots)?[0,1,2].map(i=>[0,1,2].includes(raw.doorSlots[i])?raw.doorSlots[i]:null):[null,null,null],
   finalSlots:Array.isArray(raw.finalSlots)?[0,1,2].map(i=>[0,1,2].includes(raw.finalSlots[i])?raw.finalSlots[i]:null):[null,null,null],
   eyes:Array.isArray(raw.eyes)?[0,1].map(i=>Number.isInteger(raw.eyes[i])&&raw.eyes[i]>=1&&raw.eyes[i]<=5?raw.eyes[i]:1):[1,1],
+  dawnLights:Array.isArray(raw.dawnLights)&&raw.dawnLights.length===9&&raw.dawnLights.every(n=>n===0||n===1)?[...raw.dawnLights]:[0,0,0,1,1,1,0,1,0],
+  dawnMoves:Number.isInteger(raw.dawnMoves)&&raw.dawnMoves>=0?raw.dawnMoves:0,
+  melody:Array.isArray(raw.melody)?raw.melody.filter(n=>[0,1,2].includes(n)).slice(0,4):[],
   flash:typeof raw.flash==='boolean'?raw.flash:true,
   muted:typeof raw.muted==='boolean'?raw.muted:false,
   started:Number.isFinite(raw.started)?raw.started:Date.now(),
@@ -129,7 +132,7 @@ function showWalkMark(x,y){const m=$('#walkMark');if(!m)return;m.hidden=true;voi
  const companion=new BronzeCompanion({
  world:$('#world'),
  player,
- onPat:()=>{hero.react('pet');sound('pet');sayBubble('pet','呼噜… ♡',2400);sayBubble('hero','真乖，别怕。',2400);vibrateGamepad(85,.15,.25);toast('小家伙蹭了蹭你的手，安心地陪在身边。')},
+ onPat:()=>{target=null;pending=null;keys.clear();hero.react('pet');sound('pet');const lines=[['呼噜… ♡','真乖，我在这里。'],['（鼻尖贴过来）♡','这次也多亏你啦。'],['汪呜～（眯起眼）','慢慢走，我们不着急。']][(companion.affection-1)%3];sayBubble('pet',lines[0],2400);sayBubble('hero',lines[1],2400);vibrateGamepad(85,.15,.25);toast('小家伙蹭了蹭你的手，安心地陪在身边。')},
  onRequestPat:()=>{
   if(mode!=='play')return;
   const dist=Math.hypot(state.x-companion.x,state.y-companion.y);
@@ -164,7 +167,7 @@ function showWalkMark(x,y){const m=$('#walkMark');if(!m)return;m.hidden=true;voi
 function resize(){const scale=Math.min(innerWidth/1600,innerHeight/900);$('#stage').style.transform=`scale(${scale})`}
 addEventListener('resize',resize);resize();
 function save(){if(mode==='menu')return;try{localStorage.setItem(KEY,JSON.stringify({...state,version:1}))}catch{toast('浏览器未允许保存；本次仍可继续游玩。')}}
-function sound(type){
+function sound(type,pitch=null){
  window.__audioStats.count++;window.__audioStats.lastType=type;
  if(state.muted)return;
  try{
@@ -216,7 +219,8 @@ function sound(type){
    }
   }
   const config={pet:[300,.19,.018],step:[105,.09,.024],look:[520,.3,.024],coop:[587.33,.52,.026],optical:[659.25,.58,.025],bell:[660,.62,.022],chimeMicro:[880,.75,.011],water:[248,.38,.02],turn:[196,.18,.034],solve:[440,1.25,.042],door:[64,1.4,.052],end:[330,3,.038]};
-  const [f,d,g]=config[type]||config.look;
+  const [base,d,g]=config[type]||config.look;
+  const f=Number.isFinite(pitch)?pitch:base;
   const isChime=['coop','bell','chimeMicro','optical','solve','end'].includes(type);
   const partials=isChime?[1,2.76,4.72]:[1];
   partials.forEach((ratio,idx)=>{
@@ -314,7 +318,7 @@ function updateChimeFlow(){
  const solved=Boolean(state.solved[3]);
  [0,1,2].forEach(idx=>{
   const el=$(`#chimeBell${idx}`);
-  if(el)el.classList.toggle('lit',Boolean(solved||state.chimes[idx]===targets[idx]));
+  if(el)el.classList.toggle('lit',Boolean(solved||(companion.isGuarding()&&state.chimes[idx]===targets[idx])));
  });
  const arc=$('#starBridgeArc');
  if(arc)arc.classList.toggle('lit',solved);
@@ -325,11 +329,13 @@ function wheelInner(main,sub,spokes=3){
  return `<svg class="wheel-svg" viewBox="0 0 136 136" aria-hidden="true"><circle cx="68" cy="68" r="63" fill="none" stroke="#c9bc8855" stroke-width="1.5" stroke-dasharray="4 6"/><g class="wheel-rotor"><circle cx="68" cy="68" r="52" fill="none" stroke="#d8ca9688" stroke-width="6" stroke-dasharray="16 10"/><circle cx="68" cy="68" r="41" fill="none" stroke="#8de8be44" stroke-width="1.5"/>${ticks}</g></svg><span class="wheel-core"><span class="wheel-sym">${main}</span><small>${sub}</small></span>`;
 }
 function renderScene(){
+ $('#bondPanel').hidden=true;
  companion.syncScene(state.scene,{x:state.x,y:state.y,facing:turn});
  syncChapterAudio();
  const s=scenes[state.scene];
  $('#backdrop').src=['assets/painterly/hall.webp','assets/painterly/tree.webp','assets/painterly/vault-clean.webp','assets/painterly/chime.webp','assets/painterly/dawn.webp'][state.scene];
  $('#backdrop').alt=s.name;
+ $('#world').dataset.scene=state.scene;
  $('#ritualPlate').hidden=state.scene!==1;
  $('#treeFlow').hidden=state.scene!==1;
  updateTreeBranches();
@@ -339,7 +345,7 @@ function renderScene(){
  $('#eyeLight').hidden=state.scene!==2;
  const hug=$('#celebrationHug');
  if(hug){
-  hug.hidden=state.scene!==4;
+  hug.hidden=state.scene!==4||!state.solved[4];
   hug.style.left='800px';
   hug.style.top='738px';
  }
@@ -360,8 +366,8 @@ function renderScene(){
 function placePlayer(){const lift=terrainLift(state.scene,state.x,state.y);window.__reflectionStats.terrainLift=Number(lift.toFixed(2));const scale=.68+(state.y-660)/700;player.style.left=`${state.x-78}px`;player.style.top=`${state.y-305+lift}px`;player.style.transform=`scale(${scale})`;const petLift=terrainLift(state.scene,companion.x,companion.y);if(companion?.el)companion.el.style.top=`${companion.y-132.125+petLift}px`;const hb=$('#heroBubble'),pb=$('#petBubble');if(hb){hb.style.left=`${state.x}px`;hb.style.top=`${state.y-295+lift}px`}if(pb){pb.style.left=`${companion.x}px`;pb.style.top=`${companion.y-135+petLift}px`}const pose=player.dataset.heroAction||'idle';const beamY=pose==='investigate'?-262:pose==='curious'?-276:pose==='wonder'?-284:-270;const baseAngle=pose==='investigate'?7*turn:pose==='curious'?-4*turn:pose==='wonder'?-9*turn:0;const totalAngle=Math.max(-26,Math.min(26,baseAngle+aimAngle));const torchX=state.x+45*turn,torchY=state.y+beamY+lift;$('#lightbeam').style.left=`${torchX}px`;$('#lightbeam').style.top=`${torchY}px`;$('#lightbeam').style.transform=`scaleX(${turn}) rotate(${totalAngle}deg)`;const spot=$('#flashSpot');if(spot){spot.style.left=`${pointerX}px`;spot.style.top=`${pointerY}px`}const w=$('#world');if(w){w.style.setProperty('--torch-x',`${Math.round(torchX)}px`);w.style.setProperty('--torch-y',`${Math.round(state.y-165+lift)}px`);w.style.setProperty('--aim-x',`${Math.round(pointerX)}px`);w.style.setProperty('--aim-y',`${Math.round(pointerY)}px`);w.style.setProperty('--pet-x',`${Math.round(companion.x)}px`);w.style.setProperty('--pet-y',`${Math.round(companion.y-35+petLift)}px`)}}
 function start(continuing=false){const fresh=continuing?(readSave()||loaded):null;if(fresh)state={...defaultState(state.muted),...fresh};else state=defaultState(state.muted);turn=1;darkClock=0;opticalClock=0;awakeningStart=0;previewTrueEnding=false;hero.reset(state.x,state.y,state.scene);companion.reset(state.scene,{x:state.x,y:state.y,facing:turn});player.classList.remove('facing-left');mode='play';$('#menu').hidden=true;$('#ending').hidden=true;renderScene();sound('look');save();if(state.ended){finish(true);return}sayBubble('hero','信号就在门后，先四处看看。',2800);sayBubble('pet','汪！（竖起耳朵）',2800);toast(continuing?'已恢复田野记录。':'林悦：信号就在门后。先看看这里留下了什么。')}
 $('#startBtn').onclick=()=>start();$('#continueBtn').onclick=()=>start(true);
-function openModal(tag,title,content,modalMode='modal'){mode=modalMode;keys.clear();target=null;pending=null;player.classList.remove('walking');$('#modal').classList.remove('tactile-mode','journal-mode');$('#world')?.classList.remove('puzzle-focus');$('#modalTag').textContent=tag;$('#modalTitle').textContent=title;$('#modalContent').innerHTML=content;$('#modal').hidden=false;$('#closeModal').focus();}
-function closeModal(){$('#modal').hidden=true;$('#modal').classList.remove('tactile-mode','journal-mode');$('#world')?.classList.remove('puzzle-focus');mode=$('#ending').hidden?'play':'ending';player.classList.remove('investigating');keys.clear();save()}
+function openModal(tag,title,content,modalMode='modal'){$('#bondPanel').hidden=true;mode=modalMode;keys.clear();target=null;pending=null;player.classList.remove('walking');$('#modal').classList.remove('tactile-mode','journal-mode','chime-mode');$('#world')?.classList.remove('puzzle-focus');$('#modalTag').textContent=tag;$('#modalTitle').textContent=title;$('#modalContent').innerHTML=content;$('#modal').hidden=false;$('#closeModal').focus();}
+function closeModal(){$('#modal').hidden=true;$('#modal').classList.remove('tactile-mode','journal-mode','chime-mode');$('#world')?.classList.remove('puzzle-focus');mode=$('#ending').hidden?'play':'ending';player.classList.remove('investigating');keys.clear();save()}
 $('#closeModal').onclick=closeModal;
 function discover(id){const c=clues[id];if(!c)return;if(!state.clues.includes(id)){state.clues.push(id);hero.react('discovery');companion.react('curious');sayBubble('hero','记进田野手记了。',2600);player.classList.remove('discover');void player.offsetWidth;player.classList.add('discover');sound('look');save();renderScene()}player.classList.add('investigating');placePlayer();openModal(c.tag,c.title,`<p>${c.text}</p><p class="inscription">${c.quote}</p><p>${c.note}</p><p class="note">✦ 已收录田野手记 · 随时按 Tab 查看</p><button class="action" id="leaveNote">收好记录，继续调查 →</button>`);$('#leaveNote').onclick=closeModal}
 function discoverRelic(id){const r=relics[id];if(!r)return;if(!state.relics.includes(id)){state.relics.push(id);if(id==='amberBell'&&state.doorSlots[0]===null)state.doorSlots[0]=0;if(id==='jadeLeaf'&&!state.solved[1])state.dials[0]=3;if(id==='bronzeEcho'&&!state.solved[2])state.eyes[0]=3;companion.clearScent();hero.react('discovery');companion.react('happy');sayBubble('hero','干得漂亮，小家伙！',2800);sayBubble('pet','汪呜～ ★',2800);vibrateGamepad(180,.3,.55);player.classList.remove('discover');void player.offsetWidth;player.classList.add('discover');sound('coop');save();renderScene()}player.classList.add('investigating');placePlayer();openModal(r.tag,r.title,`<p>${r.text}</p><p class="inscription">${r.quote}</p><p>${r.note}</p><p class="note">🐾 已载入「伙伴共情发现」· 机关首项刻度已产生共鸣</p><button class="action" id="leaveNote">摸摸伙伴，收好遗物 →</button>`);$('#leaveNote').onclick=closeModal}
@@ -385,7 +391,7 @@ function sequencePuzzle(final=false){
  if(state.solved[s]){if(final)changeScene(3);else changeScene(1);return}
  const values=Array.isArray(state[slotKey])?[...state[slotKey]]:[null,null,null],eyes=Array.isArray(state.eyes)?[...state.eyes]:[1,1];
  const degs=values.map(v=>v===null?0:(v+1)*120);
- const coopOn=Boolean(companion.guardTarget);
+ const coopOn=companion.isGuarding();
  const banner=coopOn?`<p class="coop-banner active">🐾 伙伴正在副铜环驻守导通音律 · 拨至正确刻度时将泛起金鸣共鸣光环</p>`:`<p class="coop-banner">◌ 协作提示：若点击地面「${scenes[s].pad.label}」让伙伴驻守，可在拨动时实时听音辨位</p>`;
  const renderDots=(val,shadow=false)=>`<div class="astrolabe-dots ${shadow?'shadow-dots':''}" aria-hidden="true">${[1,2,3,4,5].map(k=>`<i class="${k<=val?'on':''}"></i>`).join('')}</div>`;
  openModal(final?'CHAPTER III / 文明的记忆':'CHAPTER I / 青铜之门',final?'以光与影，唤醒记忆':'重排三个青铜符号',`<p>${final?'镜头已推进至记忆中枢。祭坛符号向内旋回，两枚目轮分别承接光与影。':'镜头已推进至青铜门环。三枚可转动铜环对应石碑记载的日出之序。'}</p>${banner}<p class="note">拟物青铜棘轮：点击圆盘顺时针拨动内环浮雕（太阳 → 飞鸟 → 树枝，刻度自动保留）</p><div class="slots">${[0,1,2].map(i=>`<button class="seq bronze-wheel ${coopOn&&values[i]===expected[i]?'resonating':''}" data-slot="${i}" style="--wheel-deg:${degs[i]}deg" aria-label="第${i+1}位符号">${values[i]===null?wheelInner('?',`第 ${i+1} 位`,3):wheelInner(symbols[values[i]],names[values[i]],3)}</button>`).join('')}</div>${final?`<div class="slots"><div class="eye-astrolabe"><p class="note">左目 · 光（太阳曜数）</p><div id="dots0">${renderDots(eyes[0],false)}</div><div class="stepper"><button data-eye="0" data-delta="-1" aria-label="左眼减一">−</button><b id="eye0" class="${coopOn&&eyes[0]===3?'resonating':''}">${eyes[0]}</b><button data-eye="0" data-delta="1" aria-label="左眼加一">+</button></div></div><div class="eye-astrolabe"><p class="note">右目 · 影（神木枝数）</p><div id="dots1">${renderDots(eyes[1],true)}</div><div class="stepper"><button data-eye="1" data-delta="-1" aria-label="右眼减一">−</button><b id="eye1" class="${coopOn&&eyes[1]===4?'resonating':''}">${eyes[1]}</b><button data-eye="1" data-delta="1" aria-label="右眼加一">+</button></div></div></div>`:''}${evidenceBrief(final?['mural','vessel','roots','return']:['stele'])}<p id="puzzleResult" class="result" role="status"></p><div class="puzzle-actions"><button id="submitPuzzle" class="action">${final?'唤醒青铜之眼':'叩响青铜之门'}</button><button id="hintBtn" class="hint">林悦的思考</button>${coopOn?'<button id="coopAssistBtn" class="hint">🐾 伙伴共鸣校准</button>':''}</div><p id="hintText" class="hint-text"></p>`);
@@ -439,12 +445,13 @@ function chimePuzzle(){
  const targets=[3,5,2];
  const bellNames=['日轮大钟','飞羽大钟','神木大钟'];
  const scaleNames=['宫音（3）','羽音（5）','商音（2）'];
- const coopOn=Boolean(companion.guardTarget);
+ const coopOn=companion.isGuarding();
  const banner=coopOn?`<p class="coop-banner active">🐾 伙伴正在长廊副铜环驻守 · 转至正确节律（${targets.join(' · ')}）时编钟与星桥将同步金辉共鸣</p>`:`<p class="coop-banner">◌ 协作提示：结合潮音古碑与浑天仪线索，将三钟调谐至宫、羽、商之律</p>`;
  const renderChimeUi=()=>`
   <p>镜头已聚焦至古蜀编钟中枢。轻敲每口青铜大钟，即可在五声律（1–5）之间切换。</p>${banner}
-  <div class="dial-overview">${bellNames.map((n,idx)=>`<span class="${state.chimes[idx]===targets[idx]?'matched':''}">${n}：<b>${state.chimes[idx]}</b> ${state.chimes[idx]===targets[idx]?'✦':''}</span>`).join('')}</div>
-  <div class="slots">${[0,1,2].map(i=>`<button class="chime-bell-btn bronze-wheel ${state.chimes[i]===targets[i]?'matched':''} ${coopOn&&state.chimes[i]===targets[i]?'resonating':''}" data-chime="${i}" style="--wheel-deg:${(state.chimes[i]-1)*72}deg" aria-label="调谐${bellNames[i]}">${wheelInner(state.chimes[i],bellNames[i],5)}</button>`).join('')}</div>
+  <div class="dial-overview">${bellNames.map((n,idx)=>`<span class="${coopOn&&state.chimes[idx]===targets[idx]?'matched':''}">${n}：<b>${state.chimes[idx]}</b> ${coopOn&&state.chimes[idx]===targets[idx]?'✦':''}</span>`).join('')}</div>
+  <div class="slots">${[0,1,2].map(i=>`<button class="chime-bell-btn bronze-wheel ${coopOn&&state.chimes[i]===targets[i]?'matched':''} ${coopOn&&state.chimes[i]===targets[i]?'resonating':''}" data-chime="${i}" style="--wheel-deg:${(state.chimes[i]-1)*72}deg" aria-label="调谐${bellNames[i]}">${wheelInner(state.chimes[i],bellNames[i],5)}</button>`).join('')}</div>
+  <div class="melody-panel"><span class="eyebrow">第二重 · 归巢四叩</span><p class="note">先调音，再按浑天仪记载的先后叩钟；无需抢拍，可随时重听、清空。</p><div class="strike-row">${bellNames.map((n,i)=>`<button data-strike="${i}">叩响 · ${n.slice(0,2)}</button>`).join('')}</div><p id="melodyTrail" role="status"></p><button id="replayMelody" class="hint">重听已叩四音</button><button id="clearMelody" class="hint">清空叩击</button></div>
   ${evidenceBrief(['chimeStele','astrolabe'])}
   <p id="puzzleResult" class="result" role="status"></p>
   <div class="puzzle-actions"><button id="chimeDone" class="action">${state.solved[3]?'星桥已构筑 · 前往破晓观星台 →':'导通星璇音律 · 构筑星桥'}</button><button id="hintBtn" class="hint">林悦的思考</button>${coopOn?'<button id="coopAssistBtn" class="hint">🐾 伙伴共鸣校准</button>':''}</div>
@@ -452,17 +459,22 @@ function chimePuzzle(){
  `;
  openModal('CHAPTER IV / 星璇编钟长廊','青铜编钟古律',renderChimeUi());
  setPuzzleFocus(50,48);
- hints(['读读潮音古碑，注意“击日钟为宫，击鸟钟为羽，击枝钟为商”。','宫对应3，羽对应5，商对应2。','依次将三口大钟拨至：3、5、2。']);
+ $('#modal').classList.add('chime-mode');
+ hints(['读读潮音古碑，注意“击日钟为宫，击鸟钟为羽，击枝钟为商”。','宫对应3，羽对应5，商对应2。','先将三钟拨至3、5、2，再按鸟、日、枝、鸟叩响。可清空叩击重新试。']);
+ const showMelody=()=>{$('#melodyTrail').textContent='叩击记录：'+(state.melody.map(i=>bellNames[i].slice(0,2)).join(' → ')||'等待第一声')+` · ${state.melody.length} / 4`;save()};
+ document.querySelectorAll('[data-strike]').forEach(b=>b.onclick=()=>{if(state.melody.length>=4){feedback('四声已记录。可清空后重叩，不必抢拍。');return}const i=+b.dataset.strike;state.melody.push(i);sound('bell',[261.63,293.66,329.63,392,440][state.chimes[i]-1]);showMelody()});
+ $('#replayMelody').onclick=()=>{const trail=$('#melodyTrail'),notes=[...state.melody];notes.forEach((i,n)=>setTimeout(()=>{if(!trail.isConnected||mode!=='modal')return;const b=$(`[data-strike="${i}"]`);b.classList.add('playing');sound('bell',[261.63,293.66,329.63,392,440][state.chimes[i]-1]);setTimeout(()=>b.classList.remove('playing'),320)},n*520));if(!notes.length)feedback('先叩一声，再来重听。')};
+ $('#clearMelody').onclick=()=>{state.melody=[];showMelody()};showMelody();
  const syncBells=()=>{
   document.querySelectorAll('.chime-bell-btn').forEach((b,i)=>{
    b.innerHTML=wheelInner(state.chimes[i],bellNames[i],5);
    b.style.setProperty('--wheel-deg',`${(state.chimes[i]-1)*72}deg`);
-   b.classList.toggle('matched',state.chimes[i]===targets[i]);
+   b.classList.toggle('matched',coopOn&&state.chimes[i]===targets[i]);
    b.classList.toggle('resonating',coopOn&&state.chimes[i]===targets[i]);
   });
   const spans=document.querySelectorAll('.dial-overview span');
   spans.forEach((sp,idx)=>{
-   const matched=state.chimes[idx]===targets[idx];
+   const matched=coopOn&&state.chimes[idx]===targets[idx];
    sp.classList.toggle('matched',matched);
    sp.innerHTML=`${bellNames[idx]}：<b>${state.chimes[idx]}</b> ${matched?'✦':''}`;
   });
@@ -474,7 +486,7 @@ function chimePuzzle(){
    const i=+b.dataset.chime;
    state.chimes[i]=state.chimes[i]%5+1;
    syncBells();
-   sound(state.chimes[i]===targets[i]?'coop':'bell');
+   sound('bell',[261.63,293.66,329.63,392,440][state.chimes[i]-1]);
   };
  });
  if($('#coopAssistBtn'))$('#coopAssistBtn').onclick=()=>{
@@ -489,6 +501,8 @@ function chimePuzzle(){
  };
  $('#chimeDone').onclick=()=>{
   if(state.solved[3]){closeModal();changeScene(4);return}
+  if(!['chimeStele','astrolabe'].every(id=>state.clues.includes(id))){feedback('还需调查潮音石碑与浑天仪，分别记录音高与叩钟顺序。');return}
+  if(state.melody.join(',')!=='1,0,2,1'){feedback('四声没有连成归巢的回响。再读浑天仪上的先后，调音刻度会保留。');return}
   const isMatch=targets.every((t,i)=>state.chimes[i]===t);
   if(!isMatch){feedback('编钟之声略显杂乱，深壑上的星桥尚未凝聚。');return}
   state.solved[3]=true;
@@ -505,6 +519,23 @@ function chimePuzzle(){
   toast('三钟长鸣，虚空凝桥！前方青铜门已通向终章「破晓观星台」。');
  };
 }
+
+// Nine lamps: each press flips a cross. Breadth-first search provides a hint
+// for the CURRENT saved board, rather than an answer that becomes stale.
+function flipLamps(board,index){const next=[...board],r=Math.floor(index/3),c=index%3;for(const [dr,dc] of [[0,0],[-1,0],[1,0],[0,-1],[0,1]]){const y=r+dr,x=c+dc;if(y>=0&&y<3&&x>=0&&x<3)next[y*3+x]^=1}return next}
+function lampRoute(board){const encode=b=>b.reduce((v,n,i)=>v|(n<<i),0),start=encode(board),queue=[[start,[]]],seen=new Set([start]);for(let q=0;q<queue.length;q++){const [mask,path]=queue[q];if(mask===511)return path;for(let i=0;i<9;i++){const next=encode(flipLamps(Array.from({length:9},(_,j)=>(mask>>j)&1),i));if(!seen.has(next)){seen.add(next);queue.push([next,[...path,i]])}}}return []}
+function dawnPuzzle(){
+ if(state.solved[4]){finish();return}
+ const history=[];let hint=0;
+ openModal('CHAPTER V / 同心星阵','把最后的晨光带回人间',`<p>九盏星灯以铜脉相连。让它们同时亮起，再与铜环上的伙伴合上日轮。</p><div class="dawn-board"><div class="lamp-grid">${Array.from({length:9},(_,i)=>`<button data-lamp="${i}" aria-label="星灯${i+1}"><span>✧</span><small>${i+1}</small></button>`).join('')}</div><aside><span class="eyebrow">DAWN / 05</span><p id="lampCount" role="status"></p><p class="note">翻转本灯与上下左右邻灯<br>目标：九灯同明<br>点击两次可抵消</p><p id="lampPartner" class="note"></p></aside></div>${evidenceBrief(['dawnMemorial','houndRelief'])}<div class="puzzle-actions"><button id="dawnSubmit" class="action">与伙伴合上日轮</button><button id="lampUndo" class="hint">撤回一步</button><button id="hintBtn" class="hint">推理提示</button></div><p id="puzzleResult" class="result" role="status"></p><p id="hintText" class="hint-text"></p>`);
+ setPuzzleFocus(50,58);
+ const sync=()=>{document.querySelectorAll('[data-lamp]').forEach((b,i)=>{b.classList.toggle('lit',Boolean(state.dawnLights[i]));b.setAttribute('aria-pressed',String(Boolean(state.dawnLights[i])))});$('#lampCount').textContent=`${state.dawnLights.filter(Boolean).length} / 9 已亮 · 已触碰 ${state.dawnMoves} 次`;$('#lampUndo').disabled=!history.length;$('#lampPartner').textContent=companion.isGuarding()?'🐾 伙伴已坐稳同心环':'🐾 星阵解开后，返回场景让伙伴坐稳同心环';save()};
+ document.querySelectorAll('[data-lamp]').forEach(b=>b.onclick=()=>{history.push({board:[...state.dawnLights],moves:state.dawnMoves});state.dawnLights=flipLamps(state.dawnLights,+b.dataset.lamp);state.dawnMoves++;$('#hintText').textContent='';sync();sound('turn')});
+ $('#lampUndo').onclick=()=>{const prev=history.pop();if(prev){state.dawnLights=prev.board;state.dawnMoves=prev.moves;sync();sound('turn')}};
+ $('#hintBtn').onclick=()=>{const route=lampRoute(state.dawnLights);$('#hintText').textContent=hint++===0?'先观察角灯：每个角只受三处影响。相同灯触碰两次会抵消，可以把试错逐步撤回。':route.length?`从当前星阵出发，可先触碰第 ${route[0]+1} 盏。此后仍需 ${route.length-1} 次触碰，无需重新开始。`:'九灯已同明。请确认现场记录与伙伴驻守。';sound('look')};
+ $('#dawnSubmit').onclick=()=>{if(!['dawnMemorial','houndRelief'].every(id=>state.clues.includes(id))){feedback('先调查守望者之碑与忠犬浮雕，记录星阵法则和同心环用途。');return}if(!state.dawnLights.every(Boolean)){feedback('仍有星灯沉在暗处。观察铜脉，每次影响的是一个十字。');return}if(!companion.isGuarding()){feedback('晨光已就绪。返回场景，点击同心环并等伙伴坐稳，再回圣坛合上日轮；星灯会保留。');return}state.solved[4]=true;save();closeModal();renderScene();finish()};sync();
+}
+
 function inspectEnv(id){
  const d=(scenes[state.scene].env||[]).find(item=>item[0]===id);if(!d||mode!=='play')return;
  const [,x,y,label,pose,snd,effect,line]=d;
@@ -602,6 +633,7 @@ function renderTrueEndingCard(){
  if(btn)btn.onclick=()=>{previewTrueEnding=!previewTrueEnding;sound('coop');renderTrueEndingCard()};
 }
 async function finish(immediate=false){
+ if(!immediate&&!state.solved[4]){dawnPuzzle();return}
  state.ended=true;
  state.solved[2]=true;
  if(state.scene===4)state.solved[4]=true;
@@ -697,8 +729,14 @@ $('#envSpots').onclick=e=>{const b=e.target.closest('[data-env]');if(!b||mode!==
 $('#world').onclick=e=>{if(mode!=='play'||e.target.closest('[data-id],[data-env],#companion,#coopPad,#scentSpot,#opticalGlyph'))return;const rect=$('#stage').getBoundingClientRect();if(!rect.width||!rect.height)return;const wx=(e.clientX-rect.left)/rect.width*1600,wy=(e.clientY-rect.top)/rect.height*900;const tx=Math.max(245,Math.min(1355,wx)),ty=Math.max(690,Math.min(812,wy));target={x:tx,y:ty};pending=null;showWalkMark(tx,ty)};
 function nearest(){return scenes[state.scene].points.map(p=>({id:p[0],name:p[3],d:Math.hypot(state.x-p[1],(state.y-Math.max(690,Math.min(792,p[2]+70)))*1.3)})).sort((a,b)=>a.d-b.d)[0]}
 $('#companionBtn').onclick=()=>{if(mode==='play'){const uncollected=scenes[state.scene].points.find(([id])=>clues[id]&&!state.clues.includes(id));companion.call(uncollected?uncollected[1]:null);updateCoopElements();if(Math.abs(companion.x-state.x)>6){turn=companion.x<state.x?-1:1;player.classList.toggle('facing-left',turn<0)}hero.react('curious');sayBubble('hero',uncollected?`去看看${uncollected[3]}那边？`:'过来这边，小家伙。',2600);sayBubble('pet','汪！🐾',2500);placePlayer();toast(uncollected?`你轻声招呼，法斗跑来蹭了蹭你，又朝「${uncollected[3]}」方向竖起耳朵。`:'你轻声招呼，法斗摇摇晃晃地跑了过来。')}};
+$('#bondBtn').onclick=()=>{if(mode!=='play')return;const panel=$('#bondPanel');panel.hidden=!panel.hidden;$('#bondStatus').textContent=companion.guardTarget?'它正认真守着铜环。呼唤或抚摸会让它离开岗位。':companion.scentTarget?'它正在循着气味寻找东西，可以等它找到再陪它。':companion.affection?'它记得你的抚摸，不时抬头看看你。':'小家伙正留意着你的脚步。试着伸出手，或陪它追追光。'};
+$('#bondClose').onclick=()=>{$('#bondPanel').hidden=true};
+$('#bondPat').onclick=()=>{if(mode!=='play')return;$('#bondPanel').hidden=true;companion.onRequestPat()};
+$('#bondPlay').onclick=()=>{if(mode!=='play')return;$('#bondPanel').hidden=true;if(companion.guardTarget||companion.scentTarget){toast('小家伙正在专心帮忙。先按 P 唤回，再一起玩吧。');return}companion.call();const side=companion.x<state.x?-1:1;companion.playVignette('chase-light',{x:state.x+side*140,y:state.y+18});hero.react('pet');sound('pet');sayBubble('hero','看，这边有一小束光。',2800);sayBubble('pet','（歪头…小跑追过去）',2800)};
+$('#bondRest').onclick=()=>{if(mode!=='play')return;$('#bondPanel').hidden=true;companion.releaseGuard(true);companion.clearScent();companion.vignette=null;companion.greetFor=0;companion.recallFor=0;companion.attentionFor=0;companion.sniffCooldown=20;target=null;pending=null;keys.clear();sayBubble('hero','歇一会儿，我就在这里。',2800);toast('停下脚步陪它一会儿，小家伙会慢慢坐下、趴好；你起步时它会跟上。')};
 $('#bagBtn').onclick=()=>{if(mode==='play')journal()};$('#flashBtn').onclick=()=>{state.flash=!state.flash;if(state.flash)darkClock=0;updateButtons();save()};$('#muteBtn').onclick=()=>{state.muted=!state.muted;updateButtons();if(!state.muted)sound('look');save()};$('#pauseBtn').onclick=()=>{if(mode!=='play')return;openModal('FIELD RECORD / 暂停','在幽光中稍作停留','<p>进度已自动记录。暂停期间，世界与伙伴动作均已凝固。</p><button id="resumeBtn" class="action">继续探索 →</button><button id="menuBtn" class="hint">返回主菜单</button>','pause');$('#resumeBtn').onclick=closeModal;$('#menuBtn').onclick=()=>{save();loaded={...state};$('#continueBtn').hidden=false;$('#modal').hidden=true;$('#menu').hidden=false;mode='menu';keys.clear()}};
-addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['arrowup','arrowdown','arrowleft','arrowright',' ','tab'].includes(k))e.preventDefault();if(e.repeat&&['e','f','m','p','tab','escape'].includes(k))return;if(k==='escape'){if(mode==='modal'||mode==='pause')closeModal();else if(mode==='play')$('#pauseBtn').click();return}if(mode!=='play')return;if(k==='p'){$('#companionBtn').click();return}if(k==='tab'){journal();return}if(k==='f'){$('#flashBtn').click();return}if(k==='m'){$('#muteBtn').click();return}if(k==='e'){const n=nearest();if(n.d<130)interact(n.id);else toast('走近带菱形标记的物品，或直接点击地面与物品。');return}keys.add(k);target=null;pending=null});addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>keys.clear());
+function moveModalFocus(delta){const buttons=[...$('#modal').querySelectorAll('button:not(:disabled)')].filter(b=>b.getClientRects().length);const idx=buttons.indexOf(document.activeElement);buttons[(idx+delta+buttons.length)%buttons.length]?.focus()}
+addEventListener('keydown',e=>{const k=e.key.toLowerCase();if((mode==='modal'||mode==='pause')&&k==='tab'){e.preventDefault();moveModalFocus(e.shiftKey?-1:1);return}if(mode==='modal'&&document.activeElement?.matches('[data-lamp]')&&['arrowleft','arrowright','arrowup','arrowdown'].includes(k)){e.preventDefault();const i=+document.activeElement.dataset.lamp,delta={arrowleft:-1,arrowright:1,arrowup:-3,arrowdown:3}[k];$(`[data-lamp="${(i+delta+9)%9}"]`)?.focus();return}if(['arrowup','arrowdown','arrowleft','arrowright',' ','tab'].includes(k))e.preventDefault();if(e.repeat&&['e','f','m','p','tab','escape'].includes(k))return;if(k==='escape'){if(mode==='modal'||mode==='pause')closeModal();else if(mode==='play')$('#pauseBtn').click();return}if(mode!=='play')return;if(k==='p'){$('#companionBtn').click();return}if(k==='tab'){journal();return}if(k==='f'){$('#flashBtn').click();return}if(k==='m'){$('#muteBtn').click();return}if(k==='e'){const n=nearest();if(n.d<130)interact(n.id);else toast('走近带菱形标记的物品，或直接点击地面与物品。');return}keys.add(k);target=null;pending=null});addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>keys.clear());
 for(const b of document.querySelectorAll('[data-dir]')){const key='arrow'+b.dataset.dir;b.onpointerdown=e=>{e.preventDefault();b.setPointerCapture(e.pointerId);keys.add(key);target=null;pending=null};b.onpointerup=b.onpointercancel=()=>keys.delete(key)}$('#touchE').onclick=()=>{const n=nearest();if(mode==='play'&&n.d<130)interact(n.id)};
 addEventListener('gamepadconnected',()=>{window.__gamepadStats.connected=true;const el=$('#padStatus');if(el)el.hidden=false;toast('已连接手柄：左摇杆移动，右摇杆照射手电，A调查 / X唤宠 / Y手电 / LB驻守铜环')});
 addEventListener('gamepaddisconnected',()=>{const pads=navigator.getGamepads?Array.from(navigator.getGamepads()).filter(Boolean):[];window.__gamepadStats.connected=pads.length>0;const el=$('#padStatus');if(el)el.hidden=pads.length===0});
@@ -719,10 +757,11 @@ function pollGamepad(dt){
   pointerY=Math.max(80,Math.min(840,pointerY+ry*420*dt));
   if(state.flash)aimAngle=Math.max(-22,Math.min(22,Math.atan2(pointerY-(state.y-210),Math.abs(pointerX-state.x)+110)*180/Math.PI*.55));
  }
+ if(mode==='modal'||mode==='pause'){if(tap(12)||tap(14))moveModalFocus(-1);if(tap(13)||tap(15))moveModalFocus(1)}
  if(tap(0)){
   window.__gamepadStats.lastButton='A';
   if(mode==='menu')$('#startBtn')?.click();
-  else if(mode==='modal'||mode==='pause')($('#submitPuzzle')||$('#dialDone')||$('#leaveNote')||$('#resumeBtn')||$('#closeModal'))?.click();
+  else if(mode==='modal'||mode==='pause'){const focused=document.activeElement;if(focused?.matches('#modal button'))focused.click();else moveModalFocus(1)}
   else if(mode==='play'){const n=nearest();if(n&&n.d<130)interact(n.id);else toast('走近带菱形标记的物品按 A 调查。')}
  }
  if(tap(1)){window.__gamepadStats.lastButton='B';if(mode==='modal'||mode==='pause')closeModal()}
@@ -884,5 +923,15 @@ function drawWaterReflections(t){
  window.__reflectionStats.framesRendered++;
  window.__reflectionStats.lastScene=state.scene;
 }
-function frame(t){const dt=Math.min((t-last)/1000||0,.05);last=t;const pad=pollGamepad(dt);if(mode==='pause'){requestAnimationFrame(frame);return}const n=nearest();if(mode==='play'){state.elapsed+=dt;if(state.scene===1){chimeClock+=dt;if(chimeClock>7.2){chimeClock=0;sound('chimeMicro')}}const px=((state.x-800)/480)+((pointerX-800)/1600)*.32,py=((state.y-750)/130)+((pointerY-450)/900)*.22;$('#world')?.style.setProperty('--px',px.toFixed(3));$('#world')?.style.setProperty('--py',py.toFixed(3));const opt=scenes[state.scene]?.optical,optEl=$('#opticalGlyph');if(opt&&optEl&&state.flash){const dOpt=Math.hypot(pointerX-opt.x,pointerY-opt.y);optEl.classList.toggle('lit',dOpt<135);if(dOpt<125&&!(state.optical||[]).includes(state.scene)){opticalClock+=dt;if(opticalClock>.28){revealOptical(state.scene);opticalClock=0}}else opticalClock=0}else if(optEl)optEl.classList.remove('lit');if(!state.flash){darkClock+=dt;const rId=scenes[state.scene]?.relic;if(darkClock>.38&&rId&&!state.relics.includes(rId)&&!companion.scentTarget){companion.trackScent(relics[rId]);updateCoopElements();toast('黑暗中浮现微弱的荧光气味，法斗竖起耳朵循味跑了过去！')}}else darkClock=0;if(companion.scentTarget||!state.flash)updateCoopElements();let dx=(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0)+pad.gx,dy=(keys.has('s')||keys.has('arrowdown')?1:0)-(keys.has('w')||keys.has('arrowup')?1:0)+pad.gy;if(pad.gx||pad.gy){target=null;pending=null}if(pending==='companion'){const side=state.x<companion.x?-1:1;target={x:Math.max(245,Math.min(1355,companion.x+side*64)),y:Math.max(690,Math.min(812,companion.y-18))};if(Math.hypot(state.x-companion.x,state.y-companion.y)<=98){target=null;pending=null;if(Math.abs(companion.x-state.x)>6){turn=companion.x<state.x?-1:1;player.classList.toggle('facing-left',turn<0)}companion.pat(state);placePlayer()}}if(target){const vx=target.x-state.x,vy=target.y-state.y,dist=Math.hypot(vx,vy);if(dist<7){state.x=target.x;state.y=target.y;target=null;const id=pending;pending=null;if(id==='companion'){if(Math.abs(companion.x-state.x)>6){turn=companion.x<state.x?-1:1;player.classList.toggle('facing-left',turn<0)}companion.pat(state);placePlayer()}else if(id&&id.startsWith('relic:'))discoverRelic(id.slice(6));else if(id&&id.startsWith('env:'))inspectEnv(id.slice(4));else if(id)interact(id)}else{dx=vx/dist;dy=vy/dist}}let moving=mode==='play'&&(dx!==0||dy!==0);player.classList.toggle('walking',moving);if(moving){const len=Math.hypot(dx,dy)||1;state.x=Math.max(245,Math.min(1355,state.x+dx/len*240*dt));state.y=Math.max(690,Math.min(812,state.y+dy/len*155*dt));if(dx)turn=dx<0?-1:1;player.classList.toggle('facing-left',turn<0);stepClock+=dt;if(stepClock>.32){sound('step');stepClock=0;const surf=getSurfaceMaterial(state.scene,state.x,state.y),lift=terrainLift(state.scene,state.x,state.y);stepRipples.push({x:state.x,y:state.y+4+lift,surf,born:t})}placePlayer()}document.querySelectorAll('.hotspot').forEach(b=>b.classList.toggle('near',b.dataset.id===n.id&&n.d<170));$('#interaction').style.display=n.d<120?'block':'none';$('#interaction').textContent='E · '+n.name;saveClock+=dt;if(saveClock>4){save();saveClock=0}}else{player.classList.remove('walking');$('#interaction').style.display='none'}const nearClue=Boolean(n&&n.d<132&&((clues[n.id]&&!state.clues.includes(n.id))||(!state.solved[state.scene]&&['door','sunDial','birdDial','branchDial','final'].includes(n.id))));const petDist=Math.hypot(state.x-companion.x,state.y-companion.y);hero.update(dt,t,{x:state.x,y:state.y,scene:state.scene,facing:turn,mode,flash:state.flash,nearClue,petDist});companion.update(dt,t,{x:state.x,y:state.y,mode,scene:state.scene,facing:turn});placePlayer();dust.clearRect(0,0,1600,900);drawWaterReflections(t);drawAwakeningTheater(t);for(const m of motes){m.y-=m.v*dt*30;m.x+=Math.sin(t*.0002+m.y)*dt*3;if(m.y<0)m.y=900;dust.fillStyle=`rgba(204,218,173,${m.a})`;dust.beginPath();dust.arc(m.x,m.y,m.r,0,Math.PI*2);dust.fill()}requestAnimationFrame(frame)}
+function drawExpeditionLight(t){
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ dust.save();dust.globalCompositeOperation='screen';
+ const origins=[[1110,110],[810,65],[810,120],[800,50],[800,60]],o=origins[state.scene];
+ const drift=reduce?0:Math.sin(t*.00016)*22;
+ for(let i=0;i<3;i++){const x=o[0]+i*65-65+drift,g=dust.createLinearGradient(x,o[1],x-200,850);g.addColorStop(0,state.scene===4?'#ffe4a015':'#b4dcc60b');g.addColorStop(1,'#b9deba00');dust.fillStyle=g;dust.beginPath();dust.moveTo(x,o[1]);dust.lineTo(x+35,o[1]);dust.lineTo(x-60+i*45,890);dust.lineTo(x-290+i*30,890);dust.closePath();dust.fill()}
+ // Small glints stay tied to the terrain instead of filling the entire screen.
+ if(state.scene===3||state.scene===4){for(let i=0;i<14;i++){const x=300+i*77,y=690+Math.sin(i*2.4)*40,a=reduce?.16:(Math.sin(t*.0012+i)*.5+.5)*.28;dust.fillStyle=`rgba(231,211,143,${a})`;dust.fillRect(x,y,2,2)}}
+ dust.restore();
+}
+function frame(t){const dt=Math.min((t-last)/1000||0,.05);last=t;const pad=pollGamepad(dt);if(mode==='pause'){requestAnimationFrame(frame);return}const n=nearest();if(mode==='play'){state.elapsed+=dt;if(state.scene===1){chimeClock+=dt;if(chimeClock>7.2){chimeClock=0;sound('chimeMicro')}}const px=((state.x-800)/480)+((pointerX-800)/1600)*.32,py=((state.y-750)/130)+((pointerY-450)/900)*.22;$('#world')?.style.setProperty('--px',px.toFixed(3));$('#world')?.style.setProperty('--py',py.toFixed(3));const opt=scenes[state.scene]?.optical,optEl=$('#opticalGlyph');if(opt&&optEl&&state.flash){const dOpt=Math.hypot(pointerX-opt.x,pointerY-opt.y);optEl.classList.toggle('lit',dOpt<135);if(dOpt<125&&!(state.optical||[]).includes(state.scene)){opticalClock+=dt;if(opticalClock>.28){revealOptical(state.scene);opticalClock=0}}else opticalClock=0}else if(optEl)optEl.classList.remove('lit');if(!state.flash){darkClock+=dt;const rId=scenes[state.scene]?.relic;if(darkClock>.38&&rId&&!state.relics.includes(rId)&&!companion.scentTarget){companion.trackScent(relics[rId]);updateCoopElements();toast('黑暗中浮现微弱的荧光气味，法斗竖起耳朵循味跑了过去！')}}else darkClock=0;if(companion.scentTarget||!state.flash)updateCoopElements();let dx=(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0)+pad.gx,dy=(keys.has('s')||keys.has('arrowdown')?1:0)-(keys.has('w')||keys.has('arrowup')?1:0)+pad.gy;if(pad.gx||pad.gy){target=null;pending=null}if(pending==='companion'){const side=state.x<companion.x?-1:1;target={x:Math.max(245,Math.min(1355,companion.x+side*64)),y:Math.max(690,Math.min(812,companion.y-18))};if(Math.hypot(state.x-companion.x,state.y-companion.y)<=98){target=null;pending=null;if(Math.abs(companion.x-state.x)>6){turn=companion.x<state.x?-1:1;player.classList.toggle('facing-left',turn<0)}companion.pat(state);placePlayer()}}if(target){const vx=target.x-state.x,vy=target.y-state.y,dist=Math.hypot(vx,vy);if(dist<7){state.x=target.x;state.y=target.y;target=null;const id=pending;pending=null;if(id==='companion'){if(Math.abs(companion.x-state.x)>6){turn=companion.x<state.x?-1:1;player.classList.toggle('facing-left',turn<0)}companion.pat(state);placePlayer()}else if(id&&id.startsWith('relic:'))discoverRelic(id.slice(6));else if(id&&id.startsWith('env:'))inspectEnv(id.slice(4));else if(id)interact(id)}else{dx=vx/dist;dy=vy/dist}}let moving=mode==='play'&&(dx!==0||dy!==0);player.classList.toggle('walking',moving);if(moving){const len=Math.hypot(dx,dy)||1;state.x=Math.max(245,Math.min(1355,state.x+dx/len*240*dt));state.y=Math.max(690,Math.min(812,state.y+dy/len*155*dt));if(dx)turn=dx<0?-1:1;player.classList.toggle('facing-left',turn<0);stepClock+=dt;if(stepClock>.32){sound('step');stepClock=0;const surf=getSurfaceMaterial(state.scene,state.x,state.y),lift=terrainLift(state.scene,state.x,state.y);stepRipples.push({x:state.x,y:state.y+4+lift,surf,born:t})}placePlayer()}document.querySelectorAll('.hotspot').forEach(b=>b.classList.toggle('near',b.dataset.id===n.id&&n.d<170));$('#interaction').style.display=n.d<120?'block':'none';$('#interaction').textContent='E · '+n.name;saveClock+=dt;if(saveClock>4){save();saveClock=0}}else{player.classList.remove('walking');$('#interaction').style.display='none'}const nearClue=Boolean(n&&n.d<132&&((clues[n.id]&&!state.clues.includes(n.id))||(!state.solved[state.scene]&&['door','sunDial','birdDial','branchDial','final'].includes(n.id))));const petDist=Math.hypot(state.x-companion.x,state.y-companion.y);hero.update(dt,t,{x:state.x,y:state.y,scene:state.scene,facing:turn,mode,flash:state.flash,nearClue,petDist});companion.update(dt,t,{x:state.x,y:state.y,mode,scene:state.scene,facing:turn});placePlayer();dust.clearRect(0,0,1600,900);drawWaterReflections(t);drawAwakeningTheater(t);drawExpeditionLight(t);for(const m of motes){m.y-=m.v*dt*30;m.x+=Math.sin(t*.0002+m.y)*dt*3;if(m.y<0)m.y=900;dust.fillStyle=`rgba(204,218,173,${m.a})`;dust.beginPath();dust.arc(m.x,m.y,m.r,0,Math.PI*2);dust.fill()}requestAnimationFrame(frame)}
 renderScene();requestAnimationFrame(frame);

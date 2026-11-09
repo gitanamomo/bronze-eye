@@ -1,0 +1,14 @@
+{
+  "version": "1.7.0",
+  "codesign": "verified",
+  "filesMatchSource": {
+    "index.html": true,
+    "game.js": true,
+    "companion.js": true,
+    "expedition.css": true,
+    "assets/painterly/chime.webp": true,
+    "assets/painterly/dawn.webp": true,
+    "assets/hero/celebration-hug.webp": true
+  },
+  "nativeUIPlayed": false
+}
