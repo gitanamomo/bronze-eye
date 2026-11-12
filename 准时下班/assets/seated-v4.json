@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "name": "seated-0-0-v4.webp",
+      "left": 116,
+      "top": 28,
+      "width": 240,
+      "height": 476,
+      "scale": 0.9616161616161616
+    },
+    {
+      "name": "seated-1-0-v4.webp",
+      "left": 102,
+      "top": 28,
+      "width": 281,
+      "height": 476,
+      "scale": 0.9463220675944334
+    },
+    {
+      "name": "seated-2-0-v4.webp",
+      "left": 121,
+      "top": 28,
+      "width": 250,
+      "height": 476,
+      "scale": 0.9500998003992016
+    },
+    {
+      "name": "seated-0-1-v4.webp",
+      "left": 106,
+      "top": 28,
+      "width": 229,
+      "height": 476,
+      "scale": 0.9407114624505929
+    },
+    {
+      "name": "seated-1-1-v4.webp",
+      "left": 84,
+      "top": 28,
+      "width": 281,
+      "height": 476,
+      "scale": 0.9407114624505929
+    },
+    {
+      "name": "seated-2-1-v4.webp",
+      "left": 98,
+      "top": 28,
+      "width": 250,
+      "height": 476,
+      "scale": 0.9444444444444444
+    }
+  ]
+}

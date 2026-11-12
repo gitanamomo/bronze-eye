@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "name": "bag-mini-v4.webp",
+      "left": 81,
+      "top": 235,
+      "width": 222,
+      "height": 135,
+      "scale": 0.4899135446685879
+    },
+    {
+      "name": "bag-tote-v4.webp",
+      "left": 46,
+      "top": 77,
+      "width": 293,
+      "height": 293,
+      "scale": 0.4899135446685879
+    },
+    {
+      "name": "bag-pack-v4.webp",
+      "left": 40,
+      "top": 30,
+      "width": 305,
+      "height": 340,
+      "scale": 0.4899135446685879
+    }
+  ]
+}

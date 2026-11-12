@@ -1,0 +1,16 @@
+{
+  "uniform-sheet.png": {
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true,
+    "alphaMin": 0,
+    "alphaMax": 254
+  },
+  "npc-sheet.png": {
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true,
+    "alphaMin": 0,
+    "alphaMax": 254
+  }
+}

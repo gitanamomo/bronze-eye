@@ -1,0 +1,67 @@
+{
+  "records": [
+    {
+      "name": "hero-idle-v2.webp",
+      "left": 107,
+      "top": 28,
+      "width": 162,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "hero-alert-v2.webp",
+      "left": 107,
+      "top": 28,
+      "width": 181,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "hero-dash-v2.webp",
+      "left": 33,
+      "top": 58,
+      "width": 350,
+      "height": 446,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "hero-bear-v2.webp",
+      "left": 26,
+      "top": 28,
+      "width": 274,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "npc-boss-idle-v2.webp",
+      "left": 117,
+      "top": 28,
+      "width": 162,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "npc-chat-idle-v2.webp",
+      "left": 110,
+      "top": 28,
+      "width": 183,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    },
+    {
+      "name": "npc-request-idle-v2.webp",
+      "left": 115,
+      "top": 28,
+      "width": 153,
+      "height": 476,
+      "baseline": 504,
+      "headAnchor": 192
+    }
+  ]
+}
