@@ -1,0 +1,12 @@
+{
+  "comparisonLoaded": true,
+  "sliderWorks": true,
+  "videoPlays": true,
+  "video": {
+    "duration": 7.6,
+    "width": 1280,
+    "height": 890
+  },
+  "v1Starts": true,
+  "errors": []
+}
