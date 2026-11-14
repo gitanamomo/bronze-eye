@@ -1,0 +1,34 @@
+{
+  "version": 6,
+  "passed": true,
+  "engine": "Chromium",
+  "alpha": {
+    "width": 1536,
+    "height": 1024,
+    "clear": 0.3799063364664714,
+    "cornerAlpha": 0
+  },
+  "checks": [
+    "transparent-six-frame-hero-atlas",
+    "removed-blocking-apron-overlay",
+    "knead-press-roll-frames-follow-real-prep-timer",
+    "shopkeeper-returns-to-idle",
+    "load-oven-action-and-steam",
+    "customer-approaches-with-visible-position-change",
+    "customer-transitions-to-waiting",
+    "new-arrival-does-not-recreate-existing-customers",
+    "pause-freezes-hero-and-customer-animation",
+    "serving-frame-and-paper-bag-handoff",
+    "served-customer-leaves-before-DOM-removal",
+    "dog-remains-lying-in-place",
+    "hands-render-above-counter-front",
+    "mobile-no-overflow",
+    "no-browser-script-errors"
+  ],
+  "limitations": [
+    "六个绘本姿态配合位移与小动作，并非骨骼动画",
+    "顾客使用已有角色图的进场位移、步伐起伏和等候动作，非独立逐帧步行图集",
+    "Safari/iPhone 真机未验收"
+  ],
+  "date": "2026-11-14"
+}

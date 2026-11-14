@@ -1,0 +1,36 @@
+{
+  "version": 6,
+  "engine": "Chromium",
+  "passed": true,
+  "checks": [
+    "prep-oven-tea-run-concurrently",
+    "two-independent-oven-slots",
+    "cooked-bread-transferred-to-stock",
+    "plain-and-sesame-bread-have-distinct-visuals",
+    "first-customer-recipe-matched-and-tipped",
+    "empty-tray-cannot-double-charge",
+    "tea-partial-delivery-pays-once-and-order-remains",
+    "duplicate-tea-rejected-with-tray-preserved",
+    "wrong-topping-keeps-food-and-revenue",
+    "bread-completes-partially-served-order",
+    "full-rack-blocks-pickup-without-food-loss",
+    "two-trays-hold-distinct-bread",
+    "rack-space-can-be-freed-during-bake",
+    "burnt-bread-cleared-before-reuse",
+    "dough-and-tea-capacity-limits",
+    "upgrades-cannot-reset-active-ovens",
+    "pause-freezes-every-station-and-customer",
+    "expired-customer-leaves-without-blocking-stations",
+    "settlement-and-meaningful-equipment-upgrades",
+    "save-reload-and-v1-key-compatibility",
+    "desktop-mobile-tablet-no-horizontal-overflow",
+    "timer-ends-shift",
+    "no-browser-script-errors"
+  ],
+  "limitations": [
+    "未安装 WebKit；Safari/iPhone 真机未验收",
+    "没有实际启动《飞机大厨》App；参考官方介绍、玩法拆解和玩家操作指南",
+    "并行生产与前两单为实际 UI 与计时；满容量、焦饼、升级及结算边界使用运行时测试样例"
+  ],
+  "date": "2026-11-14"
+}

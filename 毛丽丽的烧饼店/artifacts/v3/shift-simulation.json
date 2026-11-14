@@ -1,0 +1,16 @@
+{
+  "mode": "finished",
+  "target": 150,
+  "revenue": 290,
+  "served": 15,
+  "lost": 0,
+  "waste": 0,
+  "money": 319,
+  "bestCombo": 1,
+  "remainingStock": {
+    "dough": 0,
+    "bread": 3,
+    "tea": 1
+  },
+  "note": "完整180秒营业的自动策略模拟；时间按0.1秒推进，调用与UI相同的生产和出餐函数，不代表真人操作水平。"
+}

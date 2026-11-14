@@ -1,0 +1,25 @@
+{
+  "version": "v2",
+  "engine": "Chromium",
+  "passed": true,
+  "checks": [
+    "visible-customer-and-custom-order",
+    "three-kneads-and-pointer-drag-roll",
+    "wrong-ingredient-refused-no-sale",
+    "discard-consumes-only-one-bread-cost",
+    "remove-ingredient-refunds-exact-cost",
+    "complete-manual-order-perfect-sale",
+    "wrong-sesame-refused",
+    "pork-pickle-extra-scallion-spicy-no-sesame-order",
+    "sweet-bean-order",
+    "ingredient-quantity-limit",
+    "mobile-no-overflow",
+    "bread-can-wait-for-customer-without-auto-sale",
+    "customer-buys-previously-baked-matching-bread",
+    "oven-pauses-and-burnt-bread-must-be-remade",
+    "day-settlement-upgrade-save-reload",
+    "no-browser-errors"
+  ],
+  "webkit": "未安装，Safari/iPhone 真机未验收",
+  "fixtureNotes": "菜肉和豆沙订单用固定需求覆盖全部配料；结算测试设置收入至达标边界。揉面、拖拽擀面、放料、包边、芝麻、烘烤与交付均实际操作 UI。"
+}

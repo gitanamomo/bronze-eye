@@ -1,0 +1,24 @@
+[
+  {
+    "engine": "chromium",
+    "available": true,
+    "passed": true,
+    "checks": [
+      "perfect-baking-sale",
+      "pet",
+      "pause",
+      "insufficient-funds",
+      "goal-settlement",
+      "expansion",
+      "timer-settlement",
+      "save-reload",
+      "mobile-no-overflow",
+      "no-console-errors"
+    ]
+  },
+  {
+    "engine": "webkit",
+    "available": false,
+    "error": "browserType.launch: Executable doesn't exist at /Users/gitana/Library/Caches/ms-playwright/webkit-2370/pw_run.sh"
+  }
+]

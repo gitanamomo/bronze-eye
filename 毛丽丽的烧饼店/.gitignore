@@ -1,0 +1,11 @@
+# 保留本项目的历史版本与动态演示，覆盖上级通用忽略规则。
+!versions/
+!versions/**
+!artifacts/v2/
+!artifacts/v2/**
+!artifacts/v3/
+!artifacts/v3/**
+!artifacts/v6/living-shop-demo.mp4
+.DS_Store
+node_modules/
+video-frames/

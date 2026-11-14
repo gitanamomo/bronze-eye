@@ -1,0 +1,31 @@
+{
+  "version": 4,
+  "passed": true,
+  "engine": "Chromium",
+  "alpha": {
+    "width": 1536,
+    "height": 1024,
+    "transparentRatio": 0.3892065684000651,
+    "opaqueRatio": 0.5300490061442057,
+    "corners": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "checks": [
+    "five-painted-NPC-sprite-cells",
+    "no-vector-customer-placeholder",
+    "customer-click-keeps-orders",
+    "dog-fixed-after-35-seconds",
+    "dog-stays-in-lying-frame",
+    "pet-interaction-preserved",
+    "desktop-and-mobile-layout",
+    "no-browser-errors"
+  ],
+  "limitations": [
+    "Safari/iPhone 真机未验收",
+    "截图使用构造的经营状态展示顾客与布局"
+  ]
+}
